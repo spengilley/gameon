@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ManageAvatarViewController.h"
 
-@interface ProfileViewController : UIViewController
+@interface ProfileViewController : ManageAvatarViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *avatar;
 @property (weak, nonatomic) IBOutlet UITextField *name;
 
 @end
