@@ -23,6 +23,7 @@
 		66AE12741A1F59EF00613EA6 /* Raketto WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66AE12551A1F59EF00613EA6 /* Raketto WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		66AE127E1A1F5AAB00613EA6 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE127D1A1F5AAB00613EA6 /* FeedViewController.m */; };
 		66AE12811A1F5AF700613EA6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12801A1F5AF700613EA6 /* ProfileViewController.m */; };
+		7A25EF631A1F61C700B633A1 /* FeedItemCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A25EF621A1F61C700B633A1 /* FeedItemCellTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		66AE127D1A1F5AAB00613EA6 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		66AE127F1A1F5AF700613EA6 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		66AE12801A1F5AF700613EA6 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		7A25EF611A1F61C700B633A1 /* FeedItemCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItemCellTableViewCell.h; sourceTree = "<group>"; };
+		7A25EF621A1F61C700B633A1 /* FeedItemCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItemCellTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 				66AE12381A1F59DD00613EA6 /* Images.xcassets */,
 				66AE123A1A1F59DD00613EA6 /* LaunchScreen.xib */,
 				66AE12281A1F59DD00613EA6 /* Supporting Files */,
+				7A25EF611A1F61C700B633A1 /* FeedItemCellTableViewCell.h */,
+				7A25EF621A1F61C700B633A1 /* FeedItemCellTableViewCell.m */,
 			);
 			path = Raketto;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 			files = (
 				66AE122E1A1F59DD00613EA6 /* AppDelegate.m in Sources */,
 				66AE127E1A1F5AAB00613EA6 /* FeedViewController.m in Sources */,
+				7A25EF631A1F61C700B633A1 /* FeedItemCellTableViewCell.m in Sources */,
 				66AE12811A1F5AF700613EA6 /* ProfileViewController.m in Sources */,
 				66AE122B1A1F59DD00613EA6 /* main.m in Sources */,
 			);
@@ -664,6 +670,7 @@
 				66AE124D1A1F59DD00613EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66AE124E1A1F59DD00613EA6 /* Build configuration list for PBXNativeTarget "RakettoTests" */ = {
 			isa = XCConfigurationList;
@@ -672,6 +679,7 @@
 				66AE12501A1F59DD00613EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66AE12751A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "Raketto Watch App" */ = {
 			isa = XCConfigurationList;
@@ -680,6 +688,7 @@
 				66AE12771A1F59EF00613EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66AE12781A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "Raketto WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -688,6 +697,7 @@
 				66AE127A1A1F59EF00613EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
