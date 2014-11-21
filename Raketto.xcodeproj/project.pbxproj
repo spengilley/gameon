@@ -176,6 +176,8 @@
 				66AE12381A1F59DD00613EA6 /* Images.xcassets */,
 				66AE123A1A1F59DD00613EA6 /* LaunchScreen.xib */,
 				66AE12281A1F59DD00613EA6 /* Supporting Files */,
+				7A25EF611A1F61C700B633A1 /* FeedItemCellTableViewCell.h */,
+				7A25EF621A1F61C700B633A1 /* FeedItemCellTableViewCell.m */,
 			);
 			path = Raketto;
 			sourceTree = "<group>";
@@ -690,6 +692,7 @@
 				66AE124D1A1F59DD00613EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66AE124E1A1F59DD00613EA6 /* Build configuration list for PBXNativeTarget "RakettoTests" */ = {
 			isa = XCConfigurationList;
@@ -698,6 +701,7 @@
 				66AE12501A1F59DD00613EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66AE12751A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "Raketto Watch App" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +710,7 @@
 				66AE12771A1F59EF00613EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66AE12781A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "Raketto WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +719,7 @@
 				66AE127A1A1F59EF00613EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
