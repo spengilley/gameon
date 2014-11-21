@@ -41,7 +41,9 @@
         [self presentViewController:whoAreYouViewController animated:YES completion:nil];
     } else {
         
-        ProfileViewController *profileViewController = [[self viewControllers] objectAtIndex:0];
+        
+        UINavigationController *profileViewNavController = [[self viewControllers] objectAtIndex:0];
+        ProfileViewController *profileViewController = [[profileViewNavController viewControllers] objectAtIndex:0];
         profileViewController.avatar.image = self.userUsingThisApp.largeImage;
         profileViewController.name.text = self.userUsingThisApp.username;
         
