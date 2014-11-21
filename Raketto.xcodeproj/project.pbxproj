@@ -27,6 +27,8 @@
 		66AE12871A1F62F600613EA6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12861A1F62F600613EA6 /* User.m */; };
 		66AE128A1A1F65AA00613EA6 /* ManageAvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12891A1F65AA00613EA6 /* ManageAvatarViewController.m */; };
 		66AE12901A1F695C00613EA6 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE128F1A1F695C00613EA6 /* TabBarViewController.m */; };
+		7A25EF661A1F7A7900B633A1 /* FeedItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A25EF651A1F7A7900B633A1 /* FeedItemTableViewCell.m */; };
+		7A25EF6E1A1F8CAB00B633A1 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A25EF6D1A1F8CAB00B633A1 /* Game.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,10 @@
 		66AE12891A1F65AA00613EA6 /* ManageAvatarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageAvatarViewController.m; sourceTree = "<group>"; };
 		66AE128E1A1F695C00613EA6 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		66AE128F1A1F695C00613EA6 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		7A25EF641A1F7A7900B633A1 /* FeedItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItemTableViewCell.h; sourceTree = "<group>"; };
+		7A25EF651A1F7A7900B633A1 /* FeedItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItemTableViewCell.m; sourceTree = "<group>"; };
+		7A25EF6C1A1F8CAB00B633A1 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		7A25EF6D1A1F8CAB00B633A1 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,10 @@
 		66AE121C1A1F59DD00613EA6 = {
 			isa = PBXGroup;
 			children = (
+				7A25EF681A1F88C500B633A1 /* controllers */,
+				7A25EF671A1F88BE00B633A1 /* models */,
+				7A25EF641A1F7A7900B633A1 /* FeedItemTableViewCell.h */,
+				7A25EF651A1F7A7900B633A1 /* FeedItemTableViewCell.m */,
 				66AE128E1A1F695C00613EA6 /* TabBarViewController.h */,
 				66AE128F1A1F695C00613EA6 /* TabBarViewController.m */,
 				66AE12881A1F65AA00613EA6 /* ManageAvatarViewController.h */,
@@ -145,8 +155,6 @@
 				66AE12801A1F5AF700613EA6 /* ProfileViewController.m */,
 				66AE127C1A1F5AAB00613EA6 /* FeedViewController.h */,
 				66AE127D1A1F5AAB00613EA6 /* FeedViewController.m */,
-				66AE12851A1F62F600613EA6 /* User.h */,
-				66AE12861A1F62F600613EA6 /* User.m */,
 				66AE12271A1F59DD00613EA6 /* Raketto */,
 				66AE12441A1F59DD00613EA6 /* RakettoTests */,
 				66AE12591A1F59EF00613EA6 /* Raketto WatchKit Extension */,
@@ -176,8 +184,6 @@
 				66AE12381A1F59DD00613EA6 /* Images.xcassets */,
 				66AE123A1A1F59DD00613EA6 /* LaunchScreen.xib */,
 				66AE12281A1F59DD00613EA6 /* Supporting Files */,
-				7A25EF611A1F61C700B633A1 /* FeedItemCellTableViewCell.h */,
-				7A25EF621A1F61C700B633A1 /* FeedItemCellTableViewCell.m */,
 			);
 			path = Raketto;
 			sourceTree = "<group>";
@@ -254,6 +260,24 @@
 				66AE126D1A1F59EF00613EA6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7A25EF671A1F88BE00B633A1 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				66AE12851A1F62F600613EA6 /* User.h */,
+				66AE12861A1F62F600613EA6 /* User.m */,
+				7A25EF6C1A1F8CAB00B633A1 /* Game.h */,
+				7A25EF6D1A1F8CAB00B633A1 /* Game.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		7A25EF681A1F88C500B633A1 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,7 +446,9 @@
 				66AE128A1A1F65AA00613EA6 /* ManageAvatarViewController.m in Sources */,
 				66AE12871A1F62F600613EA6 /* User.m in Sources */,
 				66AE12901A1F695C00613EA6 /* TabBarViewController.m in Sources */,
+				7A25EF6E1A1F8CAB00B633A1 /* Game.m in Sources */,
 				66AE12841A1F610C00613EA6 /* WhoAreYouViewController.m in Sources */,
+				7A25EF661A1F7A7900B633A1 /* FeedItemTableViewCell.m in Sources */,
 				66AE12811A1F5AF700613EA6 /* ProfileViewController.m in Sources */,
 				66AE122B1A1F59DD00613EA6 /* main.m in Sources */,
 			);
