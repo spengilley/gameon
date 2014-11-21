@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		66AE122B1A1F59DD00613EA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE122A1A1F59DD00613EA6 /* main.m */; };
 		66AE122E1A1F59DD00613EA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE122D1A1F59DD00613EA6 /* AppDelegate.m */; };
-		66AE12311A1F59DD00613EA6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12301A1F59DD00613EA6 /* FirstViewController.m */; };
-		66AE12341A1F59DD00613EA6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12331A1F59DD00613EA6 /* SecondViewController.m */; };
 		66AE12371A1F59DD00613EA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AE12351A1F59DD00613EA6 /* Main.storyboard */; };
 		66AE12391A1F59DD00613EA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AE12381A1F59DD00613EA6 /* Images.xcassets */; };
 		66AE123C1A1F59DD00613EA6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AE123A1A1F59DD00613EA6 /* LaunchScreen.xib */; };
 		66AE12481A1F59DD00613EA6 /* RakettoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12471A1F59DD00613EA6 /* RakettoTests.m */; };
+		66AE12581A1F59EF00613EA6 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66AE12571A1F59EF00613EA6 /* WatchKit.framework */; };
+		66AE125F1A1F59EF00613EA6 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE125E1A1F59EF00613EA6 /* InterfaceController.m */; };
+		66AE12621A1F59EF00613EA6 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12611A1F59EF00613EA6 /* NotificationController.m */; };
+		66AE12641A1F59EF00613EA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AE12631A1F59EF00613EA6 /* Images.xcassets */; };
+		66AE12681A1F59EF00613EA6 /* Raketto Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 66AE12671A1F59EF00613EA6 /* Raketto Watch App.app */; };
+		66AE126F1A1F59EF00613EA6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AE126E1A1F59EF00613EA6 /* Interface.storyboard */; };
+		66AE12711A1F59EF00613EA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AE12701A1F59EF00613EA6 /* Images.xcassets */; };
+		66AE12741A1F59EF00613EA6 /* Raketto WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66AE12551A1F59EF00613EA6 /* Raketto WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		66AE127E1A1F5AAB00613EA6 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE127D1A1F5AAB00613EA6 /* FeedViewController.m */; };
+		66AE12811A1F5AF700613EA6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12801A1F5AF700613EA6 /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +33,35 @@
 			remoteGlobalIDString = 66AE12241A1F59DD00613EA6;
 			remoteInfo = Raketto;
 		};
+		66AE12691A1F59EF00613EA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66AE121D1A1F59DD00613EA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66AE12661A1F59EF00613EA6;
+			remoteInfo = "Raketto Watch App";
+		};
+		66AE12721A1F59EF00613EA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66AE121D1A1F59DD00613EA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66AE12541A1F59EF00613EA6;
+			remoteInfo = "Raketto WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66AE127B1A1F59EF00613EA6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				66AE12741A1F59EF00613EA6 /* Raketto WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		66AE12251A1F59DD00613EA6 /* Raketto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raketto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,16 +69,29 @@
 		66AE122A1A1F59DD00613EA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		66AE122C1A1F59DD00613EA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		66AE122D1A1F59DD00613EA6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		66AE122F1A1F59DD00613EA6 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		66AE12301A1F59DD00613EA6 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		66AE12321A1F59DD00613EA6 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		66AE12331A1F59DD00613EA6 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		66AE12361A1F59DD00613EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66AE12381A1F59DD00613EA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		66AE123B1A1F59DD00613EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		66AE12411A1F59DD00613EA6 /* RakettoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RakettoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66AE12461A1F59DD00613EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AE12471A1F59DD00613EA6 /* RakettoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RakettoTests.m; sourceTree = "<group>"; };
+		66AE12551A1F59EF00613EA6 /* Raketto WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Raketto WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66AE12571A1F59EF00613EA6 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		66AE125B1A1F59EF00613EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66AE125C1A1F59EF00613EA6 /* PushNotificationPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PushNotificationPayload.json; sourceTree = "<group>"; };
+		66AE125D1A1F59EF00613EA6 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		66AE125E1A1F59EF00613EA6 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		66AE12601A1F59EF00613EA6 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		66AE12611A1F59EF00613EA6 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		66AE12631A1F59EF00613EA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		66AE12671A1F59EF00613EA6 /* Raketto Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Raketto Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66AE126D1A1F59EF00613EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66AE126E1A1F59EF00613EA6 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		66AE12701A1F59EF00613EA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		66AE127C1A1F5AAB00613EA6 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		66AE127D1A1F5AAB00613EA6 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		66AE127F1A1F5AF700613EA6 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		66AE12801A1F5AF700613EA6 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +109,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		66AE12521A1F59EF00613EA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66AE12581A1F59EF00613EA6 /* WatchKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		66AE121C1A1F59DD00613EA6 = {
 			isa = PBXGroup;
 			children = (
+				66AE127F1A1F5AF700613EA6 /* ProfileViewController.h */,
+				66AE12801A1F5AF700613EA6 /* ProfileViewController.m */,
+				66AE127C1A1F5AAB00613EA6 /* FeedViewController.h */,
+				66AE127D1A1F5AAB00613EA6 /* FeedViewController.m */,
 				66AE12271A1F59DD00613EA6 /* Raketto */,
 				66AE12441A1F59DD00613EA6 /* RakettoTests */,
+				66AE12591A1F59EF00613EA6 /* Raketto WatchKit Extension */,
+				66AE126B1A1F59EF00613EA6 /* Raketto Watch App */,
+				66AE12561A1F59EF00613EA6 /* Frameworks */,
 				66AE12261A1F59DD00613EA6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +141,8 @@
 			children = (
 				66AE12251A1F59DD00613EA6 /* Raketto.app */,
 				66AE12411A1F59DD00613EA6 /* RakettoTests.xctest */,
+				66AE12551A1F59EF00613EA6 /* Raketto WatchKit Extension.appex */,
+				66AE12671A1F59EF00613EA6 /* Raketto Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,10 +152,6 @@
 			children = (
 				66AE122C1A1F59DD00613EA6 /* AppDelegate.h */,
 				66AE122D1A1F59DD00613EA6 /* AppDelegate.m */,
-				66AE122F1A1F59DD00613EA6 /* FirstViewController.h */,
-				66AE12301A1F59DD00613EA6 /* FirstViewController.m */,
-				66AE12321A1F59DD00613EA6 /* SecondViewController.h */,
-				66AE12331A1F59DD00613EA6 /* SecondViewController.m */,
 				66AE12351A1F59DD00613EA6 /* Main.storyboard */,
 				66AE12381A1F59DD00613EA6 /* Images.xcassets */,
 				66AE123A1A1F59DD00613EA6 /* LaunchScreen.xib */,
@@ -124,6 +186,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		66AE12561A1F59EF00613EA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66AE12571A1F59EF00613EA6 /* WatchKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66AE12591A1F59EF00613EA6 /* Raketto WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				66AE125D1A1F59EF00613EA6 /* InterfaceController.h */,
+				66AE125E1A1F59EF00613EA6 /* InterfaceController.m */,
+				66AE12601A1F59EF00613EA6 /* NotificationController.h */,
+				66AE12611A1F59EF00613EA6 /* NotificationController.m */,
+				66AE12631A1F59EF00613EA6 /* Images.xcassets */,
+				66AE125A1A1F59EF00613EA6 /* Supporting Files */,
+			);
+			path = "Raketto WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		66AE125A1A1F59EF00613EA6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66AE125B1A1F59EF00613EA6 /* Info.plist */,
+				66AE125C1A1F59EF00613EA6 /* PushNotificationPayload.json */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66AE126B1A1F59EF00613EA6 /* Raketto Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				66AE126E1A1F59EF00613EA6 /* Interface.storyboard */,
+				66AE12701A1F59EF00613EA6 /* Images.xcassets */,
+				66AE126C1A1F59EF00613EA6 /* Supporting Files */,
+			);
+			path = "Raketto Watch App";
+			sourceTree = "<group>";
+		};
+		66AE126C1A1F59EF00613EA6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66AE126D1A1F59EF00613EA6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,10 +244,12 @@
 				66AE12211A1F59DD00613EA6 /* Sources */,
 				66AE12221A1F59DD00613EA6 /* Frameworks */,
 				66AE12231A1F59DD00613EA6 /* Resources */,
+				66AE127B1A1F59EF00613EA6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				66AE12731A1F59EF00613EA6 /* PBXTargetDependency */,
 			);
 			name = Raketto;
 			productName = Raketto;
@@ -162,6 +274,39 @@
 			productReference = 66AE12411A1F59DD00613EA6 /* RakettoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		66AE12541A1F59EF00613EA6 /* Raketto WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66AE12781A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "Raketto WatchKit Extension" */;
+			buildPhases = (
+				66AE12511A1F59EF00613EA6 /* Sources */,
+				66AE12521A1F59EF00613EA6 /* Frameworks */,
+				66AE12531A1F59EF00613EA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66AE126A1A1F59EF00613EA6 /* PBXTargetDependency */,
+			);
+			name = "Raketto WatchKit Extension";
+			productName = "Raketto WatchKit Extension";
+			productReference = 66AE12551A1F59EF00613EA6 /* Raketto WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		66AE12661A1F59EF00613EA6 /* Raketto Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66AE12751A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "Raketto Watch App" */;
+			buildPhases = (
+				66AE12651A1F59EF00613EA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Raketto Watch App";
+			productName = "Raketto Watch App";
+			productReference = 66AE12671A1F59EF00613EA6 /* Raketto Watch App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,6 +322,12 @@
 					66AE12401A1F59DD00613EA6 = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 66AE12241A1F59DD00613EA6;
+					};
+					66AE12541A1F59EF00613EA6 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					66AE12661A1F59EF00613EA6 = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -195,6 +346,8 @@
 			targets = (
 				66AE12241A1F59DD00613EA6 /* Raketto */,
 				66AE12401A1F59DD00613EA6 /* RakettoTests */,
+				66AE12541A1F59EF00613EA6 /* Raketto WatchKit Extension */,
+				66AE12661A1F59EF00613EA6 /* Raketto Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +370,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		66AE12531A1F59EF00613EA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66AE12681A1F59EF00613EA6 /* Raketto Watch App.app in Resources */,
+				66AE12641A1F59EF00613EA6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66AE12651A1F59EF00613EA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66AE126F1A1F59EF00613EA6 /* Interface.storyboard in Resources */,
+				66AE12711A1F59EF00613EA6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -224,9 +395,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66AE12341A1F59DD00613EA6 /* SecondViewController.m in Sources */,
 				66AE122E1A1F59DD00613EA6 /* AppDelegate.m in Sources */,
-				66AE12311A1F59DD00613EA6 /* FirstViewController.m in Sources */,
+				66AE127E1A1F5AAB00613EA6 /* FeedViewController.m in Sources */,
+				66AE12811A1F5AF700613EA6 /* ProfileViewController.m in Sources */,
 				66AE122B1A1F59DD00613EA6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +410,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		66AE12511A1F59EF00613EA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66AE12621A1F59EF00613EA6 /* NotificationController.m in Sources */,
+				66AE125F1A1F59EF00613EA6 /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -246,6 +426,16 @@
 			isa = PBXTargetDependency;
 			target = 66AE12241A1F59DD00613EA6 /* Raketto */;
 			targetProxy = 66AE12421A1F59DD00613EA6 /* PBXContainerItemProxy */;
+		};
+		66AE126A1A1F59EF00613EA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66AE12661A1F59EF00613EA6 /* Raketto Watch App */;
+			targetProxy = 66AE12691A1F59EF00613EA6 /* PBXContainerItemProxy */;
+		};
+		66AE12731A1F59EF00613EA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66AE12541A1F59EF00613EA6 /* Raketto WatchKit Extension */;
+			targetProxy = 66AE12721A1F59EF00613EA6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -399,6 +589,62 @@
 			};
 			name = Release;
 		};
+		66AE12761A1F59EF00613EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Raketto_WatchKit_Extension;
+				INFOPLIST_FILE = "Raketto Watch App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		66AE12771A1F59EF00613EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				IBSC_MODULE = Raketto_WatchKit_Extension;
+				INFOPLIST_FILE = "Raketto Watch App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		66AE12791A1F59EF00613EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Raketto WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		66AE127A1A1F59EF00613EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Raketto WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -424,6 +670,22 @@
 			buildConfigurations = (
 				66AE124F1A1F59DD00613EA6 /* Debug */,
 				66AE12501A1F59DD00613EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66AE12751A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "Raketto Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66AE12761A1F59EF00613EA6 /* Debug */,
+				66AE12771A1F59EF00613EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66AE12781A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "Raketto WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66AE12791A1F59EF00613EA6 /* Debug */,
+				66AE127A1A1F59EF00613EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
