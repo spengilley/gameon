@@ -25,6 +25,14 @@
     
     [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:50.0/255.0 green:50.0/255.0 blue:50.0/255.0 alpha:1.0]];
     [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    UITabBarItem *profileTab = [self.tabBar.items objectAtIndex:0];
+    profileTab.image = [[UIImage imageNamed:@"profile"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    profileTab.selectedImage = [UIImage imageNamed:@"profile"];
+    
+    UITabBarItem *feedTab = [self.tabBar.items objectAtIndex:1];
+    feedTab.image = [[UIImage imageNamed:@"feed"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    feedTab.selectedImage = [UIImage imageNamed:@"feed"];
 }
 
 - (void)didReceiveMemoryWarning {
