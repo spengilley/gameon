@@ -50,7 +50,9 @@ NSString *const endKey = @"end key";
         self.gameID = [[NSNumber alloc] initWithInt:0];
         self.myScore = [[NSNumber alloc] initWithInt:arc4random_uniform(3)];
         self.theirScore = [[NSNumber alloc] initWithInt:arc4random_uniform(3)];
-       // self.start = [NSDate alloc] init
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        //self.start = [dateFormatter ]
     } else {
         self.gameID = gameOnDisk.gameID;
         
