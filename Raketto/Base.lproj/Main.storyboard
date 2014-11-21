@@ -128,7 +128,7 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController extendedLayoutIncludesOpaqueBars="YES" id="49e-Tb-3d3" customClass="TabBarViewController" sceneMemberID="viewController">
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -153,7 +153,7 @@
                         <viewControllerLayoutGuide type="bottom" id="OWV-fu-vUM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="t8L-d1-WSX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVr-kr-hOi">
@@ -189,6 +189,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="cVu-RE-lGq"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="avatar" destination="s5B-WE-s3k" id="42V-ik-lBx"/>
                         <outlet property="name" destination="py1-hv-7fD" id="3gT-H3-GVm"/>
@@ -210,12 +211,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A0k-dv-Xie">
-                                <rect key="frame" x="0.0" y="-1" width="320" height="74"/>
-                                <color key="backgroundColor" red="0.93472027778625488" green="0.87914707970612171" blue="0.05322462190503649" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CgT-uv-nGm">
+                                <rect key="frame" x="82" y="20" width="141" height="33"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bge-2H-PEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,7 +225,7 @@
                     <color key="backgroundColor" red="0.9347202778" green="0.87914707969999994" blue="0.053224621909999999" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-68" y="-828"/>
+            <point key="canvasLocation" x="7" y="-818"/>
         </scene>
         <!--Profile-->
         <scene sceneID="xtc-HT-J9j">
@@ -233,6 +233,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RqT-ZL-9by" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" id="f08-kA-ADs"/>
                     <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="K9t-mC-jcX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -252,6 +254,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wi4-aK-rxf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Feed" id="1WA-br-t2n"/>
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cik-1s-eZZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -268,6 +271,7 @@
     </scenes>
     <resources>
         <image name="large_avatar" width="150" height="150"/>
+        <image name="logo" width="640" height="148"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

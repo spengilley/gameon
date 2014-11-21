@@ -36,6 +36,11 @@
     self.avatar.layer.borderWidth = 2.0;
     self.avatar.layer.borderColor = [[UIColor colorWithRed:146.0/255.0 green:146.0/255.0 blue:146.0/255.0 alpha:1.0] CGColor];
     
+    UIImage *image = [UIImage imageNamed:@"logo"];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:image];
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:50.0/255.0 green:50.0/255.0 blue:50.0/255.0 alpha:1.0];
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 - (void)didReceiveMemoryWarning {
