@@ -9,6 +9,13 @@
 #import "FeedViewController.h"
 
 @interface FeedViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *myScore;
+@property (strong, nonatomic) IBOutlet UILabel *theirScore;
+@property (strong, nonatomic) IBOutlet UIImageView *myAvatar;
+@property (strong, nonatomic) IBOutlet UIImageView *theirAvatar;
+@property (strong, nonatomic) IBOutlet UITextView *gameScores;
+
+@property (strong, nonatomic) NSMutableDictionary *rowValues;
 
 @end
 
@@ -18,6 +25,15 @@
     [super viewDidLoad];
 
     [self tableView].separatorColor = [UIColor clearColor];
+    
+    
+}
+
+
+- (void) createRowValuesArray {
+    
+    //self.rowValues = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"myScore", @"3", "theirScore", @"2", @"myAvatar", , nil]
+    
 }
 
 - (void)didReceiveMemoryWarning {
