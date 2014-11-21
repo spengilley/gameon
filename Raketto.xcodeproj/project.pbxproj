@@ -23,7 +23,10 @@
 		66AE12741A1F59EF00613EA6 /* Raketto WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66AE12551A1F59EF00613EA6 /* Raketto WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		66AE127E1A1F5AAB00613EA6 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE127D1A1F5AAB00613EA6 /* FeedViewController.m */; };
 		66AE12811A1F5AF700613EA6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12801A1F5AF700613EA6 /* ProfileViewController.m */; };
-		7A25EF631A1F61C700B633A1 /* FeedItemCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A25EF621A1F61C700B633A1 /* FeedItemCellTableViewCell.m */; };
+		66AE12841A1F610C00613EA6 /* WhoAreYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12831A1F610C00613EA6 /* WhoAreYouViewController.m */; };
+		66AE12871A1F62F600613EA6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12861A1F62F600613EA6 /* User.m */; };
+		66AE128A1A1F65AA00613EA6 /* ManageAvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12891A1F65AA00613EA6 /* ManageAvatarViewController.m */; };
+		66AE12901A1F695C00613EA6 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE128F1A1F695C00613EA6 /* TabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +96,14 @@
 		66AE127D1A1F5AAB00613EA6 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		66AE127F1A1F5AF700613EA6 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		66AE12801A1F5AF700613EA6 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		7A25EF611A1F61C700B633A1 /* FeedItemCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItemCellTableViewCell.h; sourceTree = "<group>"; };
-		7A25EF621A1F61C700B633A1 /* FeedItemCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItemCellTableViewCell.m; sourceTree = "<group>"; };
+		66AE12821A1F610C00613EA6 /* WhoAreYouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhoAreYouViewController.h; sourceTree = "<group>"; };
+		66AE12831A1F610C00613EA6 /* WhoAreYouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhoAreYouViewController.m; sourceTree = "<group>"; };
+		66AE12851A1F62F600613EA6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		66AE12861A1F62F600613EA6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		66AE12881A1F65AA00613EA6 /* ManageAvatarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageAvatarViewController.h; sourceTree = "<group>"; };
+		66AE12891A1F65AA00613EA6 /* ManageAvatarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageAvatarViewController.m; sourceTree = "<group>"; };
+		66AE128E1A1F695C00613EA6 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		66AE128F1A1F695C00613EA6 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +135,18 @@
 		66AE121C1A1F59DD00613EA6 = {
 			isa = PBXGroup;
 			children = (
+				66AE128E1A1F695C00613EA6 /* TabBarViewController.h */,
+				66AE128F1A1F695C00613EA6 /* TabBarViewController.m */,
+				66AE12881A1F65AA00613EA6 /* ManageAvatarViewController.h */,
+				66AE12891A1F65AA00613EA6 /* ManageAvatarViewController.m */,
+				66AE12821A1F610C00613EA6 /* WhoAreYouViewController.h */,
+				66AE12831A1F610C00613EA6 /* WhoAreYouViewController.m */,
 				66AE127F1A1F5AF700613EA6 /* ProfileViewController.h */,
 				66AE12801A1F5AF700613EA6 /* ProfileViewController.m */,
 				66AE127C1A1F5AAB00613EA6 /* FeedViewController.h */,
 				66AE127D1A1F5AAB00613EA6 /* FeedViewController.m */,
+				66AE12851A1F62F600613EA6 /* User.h */,
+				66AE12861A1F62F600613EA6 /* User.m */,
 				66AE12271A1F59DD00613EA6 /* Raketto */,
 				66AE12441A1F59DD00613EA6 /* RakettoTests */,
 				66AE12591A1F59EF00613EA6 /* Raketto WatchKit Extension */,
@@ -402,7 +419,10 @@
 			files = (
 				66AE122E1A1F59DD00613EA6 /* AppDelegate.m in Sources */,
 				66AE127E1A1F5AAB00613EA6 /* FeedViewController.m in Sources */,
-				7A25EF631A1F61C700B633A1 /* FeedItemCellTableViewCell.m in Sources */,
+				66AE128A1A1F65AA00613EA6 /* ManageAvatarViewController.m in Sources */,
+				66AE12871A1F62F600613EA6 /* User.m in Sources */,
+				66AE12901A1F695C00613EA6 /* TabBarViewController.m in Sources */,
+				66AE12841A1F610C00613EA6 /* WhoAreYouViewController.m in Sources */,
 				66AE12811A1F5AF700613EA6 /* ProfileViewController.m in Sources */,
 				66AE122B1A1F59DD00613EA6 /* main.m in Sources */,
 			);
@@ -606,6 +626,7 @@
 				);
 				IBSC_MODULE = Raketto_WatchKit_Extension;
 				INFOPLIST_FILE = "Raketto Watch App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -620,6 +641,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				IBSC_MODULE = Raketto_WatchKit_Extension;
 				INFOPLIST_FILE = "Raketto Watch App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
