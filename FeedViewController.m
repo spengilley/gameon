@@ -7,15 +7,13 @@
 //
 
 #import "FeedViewController.h"
+#import "User.h"
+#import "FeedItemTableViewCell.h"
 
 @interface FeedViewController ()
-@property (strong, nonatomic) IBOutlet UILabel *myScore;
-@property (strong, nonatomic) IBOutlet UILabel *theirScore;
-@property (strong, nonatomic) IBOutlet UIImageView *myAvatar;
-@property (strong, nonatomic) IBOutlet UIImageView *theirAvatar;
-@property (strong, nonatomic) IBOutlet UITextView *gameScores;
 
 @property (strong, nonatomic) NSMutableDictionary *rowValues;
+@property (strong, nonatomic) User *user;
 
 @end
 
@@ -26,15 +24,12 @@
 
     [self tableView].separatorColor = [UIColor clearColor];
     
+    self.user = [[User alloc] init];
+    [self.user buildFromFile];
     
 }
 
 
-- (void) createRowValuesArray {
-    
-    //self.rowValues = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"myScore", @"3", "theirScore", @"2", @"myAvatar", , nil]
-    
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -46,8 +41,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedItem"];
+    FeedItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedItem"];
     
+    cell.myAvatar.image = self.user.image;
+    cell.myAvatar.layer.cornerRadius = cell.myAvatar.frame.size.width / 2;
+    cell.myAvatar.layer.masksToBounds = YES;
+    cell.myAvatar.layer.borderWidth = 1.0;
+    cell.myAvatar.layer.borderColor = [[UIColor colorWithRed:146.0/255.0 green:146.0/255.0 blue:146.0/255.0 alpha:1.0] CGColor];
+    
+    cell.myScore.text = [NSString stringWithFormat:@"%ld", indexPath.row+1];
+    cell.theirScore.text = [NSString stringWithFormat:@"%ld", indexPath.row+2];
+    cell.myGameDetails.text = @"11\n3\n15";
+    cell.theirGameDetails.text = @"5\n11\n13";
+    cell.gameDuration.text = @"15 mins\n13 mins\n25 mins";
+     
     return cell;
 }
 
