@@ -17,10 +17,10 @@
 		66AE125F1A1F59EF00613EA6 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE125E1A1F59EF00613EA6 /* InterfaceController.m */; };
 		66AE12621A1F59EF00613EA6 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12611A1F59EF00613EA6 /* NotificationController.m */; };
 		66AE12641A1F59EF00613EA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AE12631A1F59EF00613EA6 /* Images.xcassets */; };
-		66AE12681A1F59EF00613EA6 /* Raketto Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 66AE12671A1F59EF00613EA6 /* Raketto Watch App.app */; };
+		66AE12681A1F59EF00613EA6 /* GameOn Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 66AE12671A1F59EF00613EA6 /* GameOn Watch App.app */; };
 		66AE126F1A1F59EF00613EA6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AE126E1A1F59EF00613EA6 /* Interface.storyboard */; };
 		66AE12711A1F59EF00613EA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AE12701A1F59EF00613EA6 /* Images.xcassets */; };
-		66AE12741A1F59EF00613EA6 /* Raketto WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66AE12551A1F59EF00613EA6 /* Raketto WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		66AE12741A1F59EF00613EA6 /* GameOn WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66AE12551A1F59EF00613EA6 /* GameOn WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		66AE127E1A1F5AAB00613EA6 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE127D1A1F5AAB00613EA6 /* FeedViewController.m */; };
 		66AE12811A1F5AF700613EA6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12801A1F5AF700613EA6 /* ProfileViewController.m */; };
 		66AE12841A1F610C00613EA6 /* WhoAreYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12831A1F610C00613EA6 /* WhoAreYouViewController.m */; };
@@ -62,7 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				66AE12741A1F59EF00613EA6 /* Raketto WatchKit Extension.appex in Embed App Extensions */,
+				66AE12741A1F59EF00613EA6 /* GameOn WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,7 +81,7 @@
 		66AE12411A1F59DD00613EA6 /* RakettoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RakettoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66AE12461A1F59DD00613EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AE12471A1F59DD00613EA6 /* RakettoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RakettoTests.m; sourceTree = "<group>"; };
-		66AE12551A1F59EF00613EA6 /* Raketto WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Raketto WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66AE12551A1F59EF00613EA6 /* GameOn WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GameOn WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66AE12571A1F59EF00613EA6 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		66AE125B1A1F59EF00613EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AE125C1A1F59EF00613EA6 /* PushNotificationPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PushNotificationPayload.json; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		66AE12601A1F59EF00613EA6 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
 		66AE12611A1F59EF00613EA6 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		66AE12631A1F59EF00613EA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		66AE12671A1F59EF00613EA6 /* Raketto Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Raketto Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66AE12671A1F59EF00613EA6 /* GameOn Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GameOn Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66AE126D1A1F59EF00613EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AE126E1A1F59EF00613EA6 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		66AE12701A1F59EF00613EA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 			children = (
 				66AE12251A1F59DD00613EA6 /* Raketto.app */,
 				66AE12411A1F59DD00613EA6 /* RakettoTests.xctest */,
-				66AE12551A1F59EF00613EA6 /* Raketto WatchKit Extension.appex */,
-				66AE12671A1F59EF00613EA6 /* Raketto Watch App.app */,
+				66AE12551A1F59EF00613EA6 /* GameOn WatchKit Extension.appex */,
+				66AE12671A1F59EF00613EA6 /* GameOn Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -283,9 +283,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		66AE12241A1F59DD00613EA6 /* Raketto */ = {
+		66AE12241A1F59DD00613EA6 /* GameOn */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66AE124B1A1F59DD00613EA6 /* Build configuration list for PBXNativeTarget "Raketto" */;
+			buildConfigurationList = 66AE124B1A1F59DD00613EA6 /* Build configuration list for PBXNativeTarget "GameOn" */;
 			buildPhases = (
 				66AE12211A1F59DD00613EA6 /* Sources */,
 				66AE12221A1F59DD00613EA6 /* Frameworks */,
@@ -297,7 +297,7 @@
 			dependencies = (
 				66AE12731A1F59EF00613EA6 /* PBXTargetDependency */,
 			);
-			name = Raketto;
+			name = GameOn;
 			productName = Raketto;
 			productReference = 66AE12251A1F59DD00613EA6 /* Raketto.app */;
 			productType = "com.apple.product-type.application";
@@ -320,9 +320,9 @@
 			productReference = 66AE12411A1F59DD00613EA6 /* RakettoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		66AE12541A1F59EF00613EA6 /* Raketto WatchKit Extension */ = {
+		66AE12541A1F59EF00613EA6 /* GameOn WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66AE12781A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "Raketto WatchKit Extension" */;
+			buildConfigurationList = 66AE12781A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "GameOn WatchKit Extension" */;
 			buildPhases = (
 				66AE12511A1F59EF00613EA6 /* Sources */,
 				66AE12521A1F59EF00613EA6 /* Frameworks */,
@@ -333,14 +333,14 @@
 			dependencies = (
 				66AE126A1A1F59EF00613EA6 /* PBXTargetDependency */,
 			);
-			name = "Raketto WatchKit Extension";
+			name = "GameOn WatchKit Extension";
 			productName = "Raketto WatchKit Extension";
-			productReference = 66AE12551A1F59EF00613EA6 /* Raketto WatchKit Extension.appex */;
+			productReference = 66AE12551A1F59EF00613EA6 /* GameOn WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit-extension";
 		};
-		66AE12661A1F59EF00613EA6 /* Raketto Watch App */ = {
+		66AE12661A1F59EF00613EA6 /* GameOn Watch App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66AE12751A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "Raketto Watch App" */;
+			buildConfigurationList = 66AE12751A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "GameOn Watch App" */;
 			buildPhases = (
 				66AE12651A1F59EF00613EA6 /* Resources */,
 			);
@@ -348,9 +348,9 @@
 			);
 			dependencies = (
 			);
-			name = "Raketto Watch App";
+			name = "GameOn Watch App";
 			productName = "Raketto Watch App";
-			productReference = 66AE12671A1F59EF00613EA6 /* Raketto Watch App.app */;
+			productReference = 66AE12671A1F59EF00613EA6 /* GameOn Watch App.app */;
 			productType = "com.apple.product-type.application.watchapp";
 		};
 /* End PBXNativeTarget section */
@@ -390,10 +390,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66AE12241A1F59DD00613EA6 /* Raketto */,
+				66AE12241A1F59DD00613EA6 /* GameOn */,
 				66AE12401A1F59DD00613EA6 /* RakettoTests */,
-				66AE12541A1F59EF00613EA6 /* Raketto WatchKit Extension */,
-				66AE12661A1F59EF00613EA6 /* Raketto Watch App */,
+				66AE12541A1F59EF00613EA6 /* GameOn WatchKit Extension */,
+				66AE12661A1F59EF00613EA6 /* GameOn Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -420,7 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66AE12681A1F59EF00613EA6 /* Raketto Watch App.app in Resources */,
+				66AE12681A1F59EF00613EA6 /* GameOn Watch App.app in Resources */,
 				66AE12641A1F59EF00613EA6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,17 +476,17 @@
 /* Begin PBXTargetDependency section */
 		66AE12431A1F59DD00613EA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66AE12241A1F59DD00613EA6 /* Raketto */;
+			target = 66AE12241A1F59DD00613EA6 /* GameOn */;
 			targetProxy = 66AE12421A1F59DD00613EA6 /* PBXContainerItemProxy */;
 		};
 		66AE126A1A1F59EF00613EA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66AE12661A1F59EF00613EA6 /* Raketto Watch App */;
+			target = 66AE12661A1F59EF00613EA6 /* GameOn Watch App */;
 			targetProxy = 66AE12691A1F59EF00613EA6 /* PBXContainerItemProxy */;
 		};
 		66AE12731A1F59EF00613EA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66AE12541A1F59EF00613EA6 /* Raketto WatchKit Extension */;
+			target = 66AE12541A1F59EF00613EA6 /* GameOn WatchKit Extension */;
 			targetProxy = 66AE12721A1F59EF00613EA6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -711,7 +711,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66AE124B1A1F59DD00613EA6 /* Build configuration list for PBXNativeTarget "Raketto" */ = {
+		66AE124B1A1F59DD00613EA6 /* Build configuration list for PBXNativeTarget "GameOn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66AE124C1A1F59DD00613EA6 /* Debug */,
@@ -729,7 +729,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66AE12751A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "Raketto Watch App" */ = {
+		66AE12751A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "GameOn Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66AE12761A1F59EF00613EA6 /* Debug */,
@@ -738,7 +738,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66AE12781A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "Raketto WatchKit Extension" */ = {
+		66AE12781A1F59EF00613EA6 /* Build configuration list for PBXNativeTarget "GameOn WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66AE12791A1F59EF00613EA6 /* Debug */,
