@@ -67,10 +67,12 @@
                                            whatsYourNameLabel.frame.origin.y + 45.0f,
                                            whatsYourNameLabel.frame.size.width, 31.0f);
     self.nameTextField = [[UITextField alloc] initWithFrame:nameTextFieldFrame];
-    self.nameTextField.placeholder = @"Your name";
+    self.nameTextField.textColor = [UIColor whiteColor];
+    UIColor *color = [UIColor whiteColor];
+    self.nameTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Your Name" attributes:@{NSForegroundColorAttributeName: color}];
     self.nameTextField.textAlignment = NSTextAlignmentCenter;
     self.nameTextField.delegate = self;
-    self.nameTextField.textColor = [UIColor whiteColor];
+
     [self.nameTextField becomeFirstResponder];
     
     [self.myScrollView addSubview:self.nameTextField];
