@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "66AE12241A1F59DD00613EA6"
-               BuildableName = "Raketto.app"
-               BlueprintName = "Raketto"
+               BuildableName = "GameOn.app"
+               BlueprintName = "GameOn"
                ReferencedContainer = "container:Raketto.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "66AE12241A1F59DD00613EA6"
-            BuildableName = "Raketto.app"
-            BlueprintName = "Raketto"
+            BuildableName = "GameOn.app"
+            BlueprintName = "GameOn"
             ReferencedContainer = "container:Raketto.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -77,8 +77,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "66AE12241A1F59DD00613EA6"
-            BuildableName = "Raketto.app"
-            BlueprintName = "Raketto"
+            BuildableName = "GameOn.app"
+            BlueprintName = "GameOn"
             ReferencedContainer = "container:Raketto.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -96,8 +96,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "66AE12241A1F59DD00613EA6"
-            BuildableName = "Raketto.app"
-            BlueprintName = "Raketto"
+            BuildableName = "GameOn.app"
+            BlueprintName = "GameOn"
             ReferencedContainer = "container:Raketto.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

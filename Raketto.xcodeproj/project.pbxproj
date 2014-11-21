@@ -70,7 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		66AE12251A1F59DD00613EA6 /* Raketto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raketto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66AE12251A1F59DD00613EA6 /* GameOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66AE12291A1F59DD00613EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AE122A1A1F59DD00613EA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		66AE122C1A1F59DD00613EA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +106,8 @@
 		66AE12891A1F65AA00613EA6 /* ManageAvatarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageAvatarViewController.m; sourceTree = "<group>"; };
 		66AE128E1A1F695C00613EA6 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		66AE128F1A1F695C00613EA6 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		66AE12911A1FB1AB00613EA6 /* GameOn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GameOn.entitlements; sourceTree = "<group>"; };
+		66AE12921A1FB1EA00613EA6 /* GameOn WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GameOn WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		7A25EF641A1F7A7900B633A1 /* FeedItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItemTableViewCell.h; sourceTree = "<group>"; };
 		7A25EF651A1F7A7900B633A1 /* FeedItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItemTableViewCell.m; sourceTree = "<group>"; };
 		7A25EF6C1A1F8CAB00B633A1 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
@@ -141,6 +143,8 @@
 		66AE121C1A1F59DD00613EA6 = {
 			isa = PBXGroup;
 			children = (
+				66AE12921A1FB1EA00613EA6 /* GameOn WatchKit Extension.entitlements */,
+				66AE12911A1FB1AB00613EA6 /* GameOn.entitlements */,
 				7A25EF681A1F88C500B633A1 /* controllers */,
 				7A25EF671A1F88BE00B633A1 /* models */,
 				7A25EF641A1F7A7900B633A1 /* FeedItemTableViewCell.h */,
@@ -167,7 +171,7 @@
 		66AE12261A1F59DD00613EA6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66AE12251A1F59DD00613EA6 /* Raketto.app */,
+				66AE12251A1F59DD00613EA6 /* GameOn.app */,
 				66AE12411A1F59DD00613EA6 /* RakettoTests.xctest */,
 				66AE12551A1F59EF00613EA6 /* GameOn WatchKit Extension.appex */,
 				66AE12671A1F59EF00613EA6 /* GameOn Watch App.app */,
@@ -299,7 +303,7 @@
 			);
 			name = GameOn;
 			productName = Raketto;
-			productReference = 66AE12251A1F59DD00613EA6 /* Raketto.app */;
+			productReference = 66AE12251A1F59DD00613EA6 /* GameOn.app */;
 			productType = "com.apple.product-type.application";
 		};
 		66AE12401A1F59DD00613EA6 /* RakettoTests */ = {
@@ -364,6 +368,12 @@
 				TargetAttributes = {
 					66AE12241A1F59DD00613EA6 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = MN774DNFG9;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					66AE12401A1F59DD00613EA6 = {
 						CreatedOnToolsVersion = 6.2;
@@ -371,6 +381,12 @@
 					};
 					66AE12541A1F59EF00613EA6 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = MN774DNFG9;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					66AE12661A1F59EF00613EA6 = {
 						CreatedOnToolsVersion = 6.2;
@@ -591,9 +607,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GameOn.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Raketto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -601,9 +621,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GameOn.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Raketto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -678,6 +702,9 @@
 		66AE12791A1F59EF00613EA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "GameOn WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -685,6 +712,7 @@
 				INFOPLIST_FILE = "Raketto WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -692,9 +720,13 @@
 		66AE127A1A1F59EF00613EA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "GameOn WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Raketto WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
