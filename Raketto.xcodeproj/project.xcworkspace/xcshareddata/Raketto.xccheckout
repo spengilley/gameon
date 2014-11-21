@@ -6,13 +6,12 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>286654B1-56B8-4B34-BEF4-73B088494723</string>
-86711df785e292412afc99f8d2b7f6fed161fa76
 	<key>IDESourceControlProjectName</key>
 	<string>Raketto</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2F0896258BDFE360870AA9EAA44AC0F57F32CC03</key>
-		<string>github.com:adamgroom/gameon.git</string> 86711df785e292412afc99f8d2b7f6fed161fa76
+		<string>github.com:adamgroom/gameon.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Raketto.xcodeproj</string>
@@ -23,7 +22,6 @@
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:adamgroom/gameon.git</string>
-86711df785e292412afc99f8d2b7f6fed161fa76
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -36,8 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>2F0896258BDFE360870AA9EAA44AC0F57F32CC03</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Gameon</string>
->>>>>>> 86711df785e292412afc99f8d2b7f6fed161fa76
+			<string>Raketto</string>
 		</dict>
 	</array>
 </dict>
