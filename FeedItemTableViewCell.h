@@ -16,5 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITextView *myGameDetails;
 @property (strong, nonatomic) IBOutlet UITextView *theirGameDetails;
 @property (strong, nonatomic) IBOutlet UITextView *gameDuration;
+@property (strong, nonatomic) IBOutlet UIView *gamesContaingView;
+@property (strong, nonatomic) IBOutlet UIView *scoreContainingView;
 
 @end

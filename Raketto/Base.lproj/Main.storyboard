@@ -13,8 +13,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="169" sectionHeaderHeight="22" sectionFooterHeight="22" id="SFP-lT-Q65">
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedItem" rowHeight="169" id="8FF-zY-29u" customClass="FeedItemTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
@@ -27,24 +27,27 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="25" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1t3-Zm-AXa">
                                                     <rect key="frame" x="71" y="31" width="46" height="59"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="25" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="njy-mm-GMk">
                                                     <rect key="frame" x="170" y="31" width="46" height="59"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="15 mins" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="REc-4d-b01">
                                                     <rect key="frame" x="105" y="31" width="78" height="59"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="REc-4d-b01" firstAttribute="leading" secondItem="1t3-Zm-AXa" secondAttribute="trailing" constant="-12" id="edU-xG-Wy6"/>
                                                 <constraint firstItem="njy-mm-GMk" firstAttribute="leading" secondItem="REc-4d-b01" secondAttribute="trailing" constant="-13" id="j4B-7N-yl9"/>
@@ -53,7 +56,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Games" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW1-iN-3wF">
                                             <rect key="frame" x="133" y="74" width="55" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i57-G6-JMJ">
@@ -95,6 +98,10 @@
                                                 <constraint firstItem="rpU-Sp-sQZ" firstAttribute="top" secondItem="i57-G6-JMJ" secondAttribute="top" constant="6" id="njy-d2-Y8j"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PcG-7R-HbW">
+                                            <rect key="frame" x="16" y="64" width="288" height="5"/>
+                                            <color key="backgroundColor" red="0.1803921568627451" green="0.80000000000000004" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="UhL-tE-uHb" firstAttribute="centerX" secondItem="cW1-iN-3wF" secondAttribute="centerX" constant="-0.5" id="6Ew-rB-HuH"/>
@@ -108,12 +115,14 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="UhL-tE-uHb" secondAttribute="trailing" constant="8" id="li4-Oo-UNy"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="gameDuration" destination="REc-4d-b01" id="gyb-je-rbI"/>
+                                    <outlet property="gamesContaingView" destination="UhL-tE-uHb" id="k6n-PO-UmP"/>
                                     <outlet property="myAvatar" destination="EE2-UA-7Ch" id="Yry-sy-Tco"/>
                                     <outlet property="myGameDetails" destination="1t3-Zm-AXa" id="PYP-Gl-hIL"/>
                                     <outlet property="myScore" destination="KCg-j0-bzq" id="c82-gX-xzX"/>
+                                    <outlet property="scoreContainingView" destination="i57-G6-JMJ" id="KLp-gq-GD2"/>
                                     <outlet property="theirAvatar" destination="rpU-Sp-sQZ" id="tV4-0y-hPy"/>
                                     <outlet property="theirGameDetails" destination="njy-mm-GMk" id="P0K-tg-ZcK"/>
                                     <outlet property="theirScore" destination="lXs-2H-Qjw" id="ap3-cS-tGx"/>
@@ -129,7 +138,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wO-t7-RdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="384"/>
+            <point key="canvasLocation" x="926" y="393"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="yl2-sM-qoP">
