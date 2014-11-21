@@ -7,8 +7,11 @@
 //
 
 #import "ProfileViewController.h"
+#import "User.h"
 
 @interface ProfileViewController ()
+
+@property (strong,nonatomic) User *userUsingThisApp;
 
 @end
 
@@ -17,11 +20,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.userUsingThisApp = [[User alloc] init];
+    [self.userUsingThisApp buildFromFile];
+    self.name.text = self.userUsingThisApp.username;
+    
+    if (self.userUsingThisApp.largeImage) {
+        self.avatar.image = self.userUsingThisApp.largeImage;
+    } else {
+        self.avatar.image = [UIImage imageNamed:@"large_avatar"];
+    }
+
+    self.avatar.layer.cornerRadius = 75;
+    self.avatar.layer.masksToBounds = YES;
+    self.avatar.layer.borderWidth = 2.0;
+    self.avatar.layer.borderColor = [[UIColor colorWithRed:146.0/255.0 green:146.0/255.0 blue:146.0/255.0 alpha:1.0] CGColor];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self.userUsingThisApp buildFromFile];
+    self.avatar.image = self.userUsingThisApp.largeImage;
+    self.name.text = self.userUsingThisApp.username;
+    
+    self.avatar.layer.cornerRadius = 75;
+    self.avatar.layer.masksToBounds = YES;
+    self.avatar.layer.borderWidth = 2.0;
+    self.avatar.layer.borderColor = [[UIColor colorWithRed:146.0/255.0 green:146.0/255.0 blue:146.0/255.0 alpha:1.0] CGColor];
+    
+}
+
+- (IBAction)changePhoto:(id)sender {
+    
 }
 
 /*

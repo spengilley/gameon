@@ -206,6 +206,10 @@
     if ([name isEqualToString:@""]){
         name = @"Anonymous";
     }
+    self.userUsingThisApp.username = name;
+    self.userUsingThisApp.largeImage = self.avatar.image;
+    self.userUsingThisApp.image = self.avatar.image;
+
     [self.userUsingThisApp save];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
 }

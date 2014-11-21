@@ -8,6 +8,7 @@
 
 #import "TabBarViewController.h"
 #import "WhoAreYouViewController.h"
+#import "ProfileViewController.h"
 #import "User.h"
 
 @interface TabBarViewController ()
@@ -33,11 +34,17 @@
     self.userUsingThisApp = [[User alloc] init];
     [self.userUsingThisApp buildFromFile];
 
-    if ([self.userUsingThisApp.username isEqual:@0]) {
+    if ([self.userUsingThisApp.username isEqual:@""]) {
         
         WhoAreYouViewController *whoAreYouViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"whoAreYou"];
         
         [self presentViewController:whoAreYouViewController animated:YES completion:nil];
+    } else {
+        
+        ProfileViewController *profileViewController = [[self viewControllers] objectAtIndex:0];
+        profileViewController.avatar.image = self.userUsingThisApp.largeImage;
+        profileViewController.name.text = self.userUsingThisApp.username;
+        
     }
 }
 
