@@ -70,6 +70,7 @@
     self.nameTextField.placeholder = @"Your name";
     self.nameTextField.textAlignment = NSTextAlignmentCenter;
     self.nameTextField.delegate = self;
+    self.nameTextField.textColor = [UIColor whiteColor];
     [self.nameTextField becomeFirstResponder];
     
     [self.myScrollView addSubview:self.nameTextField];
@@ -107,7 +108,7 @@
     //WHAT DO YOU LOOK LIKE?
     UILabel *avatarLabel = [[UILabel alloc] init];
     avatarLabel.text = @"What do you look like?";
-    [avatarLabel setTextColor:[UIColor colorWithRed:146.0/255.0 green:146.0/255.0 blue:146.0/255.0 alpha:1.0]];
+    [avatarLabel setTextColor:[UIColor whiteColor]];
     [avatarLabel setFont:[UIFont fontWithName:@"AvenirNext-Medium" size:18.0]];
     [avatarLabel sizeToFit];
     avatarLabel.center = self.view.center;
@@ -136,7 +137,7 @@
                                   145.0,
                                   28.0);
     [choosePhotoButton setTitle:@"Choose Photo" forState:UIControlStateNormal];
-    [choosePhotoButton setBackgroundColor:[UIColor colorWithRed:0/255.0 green:161.0/255.0 blue:242.0/255.0 alpha:1.0]];
+    [choosePhotoButton setBackgroundColor:[UIColor blackColor]];
     choosePhotoButton.titleLabel.font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:14];
     choosePhotoButton.tintColor = [UIColor whiteColor];
     choosePhotoButton.layer.cornerRadius = 5;
