@@ -27,6 +27,8 @@
     self.user = [[User alloc] init];
     [self.user buildFromFile];
     
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:50.0/255.0 green:50.0/255.0 blue:50.0/255.0 alpha:1.0];
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 
