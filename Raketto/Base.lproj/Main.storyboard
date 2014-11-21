@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Feed-->
         <scene sceneID="xWI-xP-niu">
             <objects>
                 <tableViewController id="xA4-XA-Uh6" customClass="FeedViewController" sceneMemberID="viewController">
@@ -25,7 +25,7 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Games" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW1-iN-3wF">
-                                            <rect key="frame" x="133" y="69" width="55" height="21"/>
+                                            <rect key="frame" x="133" y="74" width="55" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -118,11 +118,12 @@
                             <outlet property="delegate" destination="xA4-XA-Uh6" id="den-N5-uMG"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="zWa-5N-5Kr"/>
+                    <tabBarItem key="tabBarItem" title="Feed" id="1WA-br-t2n"/>
+                    <navigationItem key="navigationItem" id="dGb-RH-CVb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wO-t7-RdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="394" y="375"/>
+            <point key="canvasLocation" x="394" y="384"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -136,7 +137,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="plC-qr-7xd" kind="relationship" relationship="viewControllers" id="pGJ-sM-LjL"/>
-                        <segue destination="xA4-XA-Uh6" kind="relationship" relationship="viewControllers" id="0oZ-yu-MxJ"/>
+                        <segue destination="xA4-XA-Uh6" kind="relationship" relationship="viewControllers" id="uas-bp-vP7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
