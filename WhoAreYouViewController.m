@@ -55,7 +55,7 @@
     //NAME LABEL
     UILabel *whatsYourNameLabel = [[UILabel alloc] init];
     whatsYourNameLabel.text = @"What is your name?";
-    [whatsYourNameLabel setTextColor:[UIColor colorWithRed:146.0/255.0 green:146.0/255.0 blue:146.0/255.0 alpha:1.0]];
+    [whatsYourNameLabel setTextColor:[UIColor whiteColor]];
     [whatsYourNameLabel setFont:[UIFont fontWithName:@"AvenirNext-Medium" size:18.0]];
     [whatsYourNameLabel sizeToFit];
     whatsYourNameLabel.center = self.view.center;
@@ -97,7 +97,7 @@
                                   28.0);
     [nextButton setTitle:@"Next" forState:UIControlStateNormal];
     [nextButton addTarget:self action:@selector(goToAddPhoto) forControlEvents:UIControlEventTouchUpInside];
-    [nextButton setBackgroundColor:[UIColor colorWithRed:0/255.0 green:161.0/255.0 blue:242.0/255.0 alpha:1.0]];
+    [nextButton setBackgroundColor:[UIColor blackColor]];
     nextButton.titleLabel.font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:14];
     nextButton.tintColor = [UIColor whiteColor];
     nextButton.layer.cornerRadius = 5;
