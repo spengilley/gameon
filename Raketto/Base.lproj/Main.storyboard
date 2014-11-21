@@ -127,7 +127,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="changePhoto:" destination="plC-qr-7xd" eventType="touchUpInside" id="Jt5-fE-ivp"/>
+                                    <action selector="changePhoto:" destination="plC-qr-7xd" eventType="touchUpInside" id="6nq-NJ-eSh"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="large_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="s5B-WE-s3k">
@@ -150,6 +150,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="f08-kA-ADs"/>
                     <navigationItem key="navigationItem" id="cVu-RE-lGq"/>
+                    <connections>
+                        <outlet property="avatar" destination="s5B-WE-s3k" id="42V-ik-lBx"/>
+                        <outlet property="name" destination="py1-hv-7fD" id="3gT-H3-GVm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPg-SK-Wbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
