@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="400" y="340.80000000000001"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="TabBarViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -117,6 +117,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPg-SK-Wbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="394" y="-317"/>
+        </scene>
+        <!--Who Are You View Controller-->
+        <scene sceneID="Wua-Vj-CPd">
+            <objects>
+                <viewController storyboardIdentifier="whoAreYou" id="3f6-k4-huA" customClass="WhoAreYouViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HWb-6C-6dn"/>
+                        <viewControllerLayoutGuide type="bottom" id="wFj-RS-4D8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l1n-HS-NIC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A0k-dv-Xie">
+                                <rect key="frame" x="0.0" y="-1" width="320" height="74"/>
+                                <color key="backgroundColor" red="0.93472027778625488" green="0.87914707970612171" blue="0.05322462190503649" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bge-2H-PEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="-828"/>
         </scene>
     </scenes>
     <resources>
