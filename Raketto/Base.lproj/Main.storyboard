@@ -278,7 +278,7 @@
     </scenes>
     <resources>
         <image name="large_avatar" width="150" height="150"/>
-        <image name="logo" width="640" height="148"/>
+        <image name="logo" width="141" height="33"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
