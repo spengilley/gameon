@@ -70,7 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		66AE12251A1F59DD00613EA6 /* Raketto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raketto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66AE12251A1F59DD00613EA6 /* GameOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66AE12291A1F59DD00613EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AE122A1A1F59DD00613EA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		66AE122C1A1F59DD00613EA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		66AE12261A1F59DD00613EA6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66AE12251A1F59DD00613EA6 /* Raketto.app */,
+				66AE12251A1F59DD00613EA6 /* GameOn.app */,
 				66AE12411A1F59DD00613EA6 /* RakettoTests.xctest */,
 				66AE12551A1F59EF00613EA6 /* GameOn WatchKit Extension.appex */,
 				66AE12671A1F59EF00613EA6 /* GameOn Watch App.app */,
@@ -299,7 +299,7 @@
 			);
 			name = GameOn;
 			productName = Raketto;
-			productReference = 66AE12251A1F59DD00613EA6 /* Raketto.app */;
+			productReference = 66AE12251A1F59DD00613EA6 /* GameOn.app */;
 			productType = "com.apple.product-type.application";
 		};
 		66AE12401A1F59DD00613EA6 /* RakettoTests */ = {

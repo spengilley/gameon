@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) NSMutableDictionary *rowValues;
 @property (strong, nonatomic) User *user;
+@property (weak) NSTimer *feedUpdateTimer;
 
 @end
 
@@ -28,6 +29,8 @@
     [self.user buildFromFile];
     
     [self configureNavigationBar];
+    
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateFeeds) userInfo:nil repeats:YES];
     
 }
 
@@ -71,7 +74,12 @@
 }
 
 
-
+-(void) updateFeeds
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSUrl *url = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"com.adam"]
+    });
+}
 
 /*
 #pragma mark - Navigation

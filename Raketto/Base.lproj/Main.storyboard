@@ -25,21 +25,21 @@
                                         <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UhL-tE-uHb">
                                             <rect key="frame" x="16" y="62" width="288" height="98"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="25" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1t3-Zm-AXa">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="25" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1t3-Zm-AXa">
                                                     <rect key="frame" x="71" y="31" width="46" height="59"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="25" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="njy-mm-GMk">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="25" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="njy-mm-GMk">
                                                     <rect key="frame" x="170" y="31" width="46" height="59"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="15 mins" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="REc-4d-b01">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="15 mins" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="REc-4d-b01">
                                                     <rect key="frame" x="105" y="31" width="78" height="59"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
