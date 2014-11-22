@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66406DF31A209C550031EE6B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D3161A1A1FC38E00F2C7E3 /* Interface.storyboard */; };
 		6669B1101A1FD110006E34E1 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6669B10D1A1FD057006E34E1 /* Storyboard.storyboard */; };
 		6669B1121A1FD434006E34E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AE12701A1F59EF00613EA6 /* Images.xcassets */; };
 		66AE122B1A1F59DD00613EA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE122A1A1F59DD00613EA6 /* main.m */; };
@@ -25,7 +26,6 @@
 		66D3160E1A1FC38E00F2C7E3 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D3160D1A1FC38E00F2C7E3 /* InterfaceController.m */; };
 		66D316101A1FC38E00F2C7E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3160F1A1FC38E00F2C7E3 /* Images.xcassets */; };
 		66D316141A1FC38E00F2C7E3 /* GameOn Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 66D316131A1FC38E00F2C7E3 /* GameOn Watch App.app */; };
-		66D3161B1A1FC38E00F2C7E3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D3161A1A1FC38E00F2C7E3 /* Interface.storyboard */; };
 		66D3161D1A1FC38E00F2C7E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3161C1A1FC38E00F2C7E3 /* Images.xcassets */; };
 		66D316201A1FC38E00F2C7E3 /* GameOn WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66D316071A1FC38E00F2C7E3 /* GameOn WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7A25EF661A1F7A7900B633A1 /* FeedItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A25EF651A1F7A7900B633A1 /* FeedItemTableViewCell.m */; };
@@ -487,6 +487,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66406DF31A209C550031EE6B /* Interface.storyboard in Resources */,
 				6669B1121A1FD434006E34E1 /* Images.xcassets in Resources */,
 				66D316141A1FC38E00F2C7E3 /* GameOn Watch App.app in Resources */,
 				66D316101A1FC38E00F2C7E3 /* Images.xcassets in Resources */,
@@ -497,7 +498,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66D3161B1A1FC38E00F2C7E3 /* Interface.storyboard in Resources */,
 				66D3161D1A1FC38E00F2C7E3 /* Images.xcassets in Resources */,
 				6669B1101A1FD110006E34E1 /* Storyboard.storyboard in Resources */,
 			);
