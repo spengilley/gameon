@@ -58,7 +58,9 @@
 }
 
 - (IBAction)endGameYes {
-    NSLog( @"Yes pressed" );
+    self.yourScore = 0;
+    self.opponentScore = 0;
+    [self updateScore];
 }
 
 - (IBAction)endGameNo {
@@ -145,9 +147,6 @@
         NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
         NSURL *url = [NSURL URLWithString:@"matches/current_match" relativeToURL:baseUrl];
         NSString *fileContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-        
-        
-        
     });
 }
 
