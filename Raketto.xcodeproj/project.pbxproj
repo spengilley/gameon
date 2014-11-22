@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66312ECC1A20A87200AA1A41 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D3160D1A1FC38E00F2C7E3 /* InterfaceController.m */; };
 		66312ECD1A20AAFA00AA1A41 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D3161A1A1FC38E00F2C7E3 /* Interface.storyboard */; };
 		66406DF61A20A3E10031EE6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3160F1A1FC38E00F2C7E3 /* Images.xcassets */; };
 		66406DF71A20A3E30031EE6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3160F1A1FC38E00F2C7E3 /* Images.xcassets */; };
-		66406DF81A20A3E80031EE6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3161C1A1FC38E00F2C7E3 /* Images.xcassets */; };
-		66406DF91A20A3E90031EE6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3161C1A1FC38E00F2C7E3 /* Images.xcassets */; };
 		66406DFA1A20A3EC0031EE6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3160F1A1FC38E00F2C7E3 /* Images.xcassets */; };
 		66AE122B1A1F59DD00613EA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE122A1A1F59DD00613EA6 /* main.m */; };
 		66AE122E1A1F59DD00613EA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE122D1A1F59DD00613EA6 /* AppDelegate.m */; };
@@ -36,6 +33,7 @@
 		7A291BF51A20B59E00543EF8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A291BF41A20B59E00543EF8 /* User.m */; };
 		7A291BF81A20B68300543EF8 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A291BF71A20B68300543EF8 /* Game.m */; };
 		7A291BFB1A20B6DB00543EF8 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A291BFA1A20B6DB00543EF8 /* Match.m */; };
+		7A291BFE1A20D24500543EF8 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D3160D1A1FC38E00F2C7E3 /* InterfaceController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -447,7 +445,6 @@
 			files = (
 				66AE12371A1F59DD00613EA6 /* Main.storyboard in Resources */,
 				66406DFA1A20A3EC0031EE6B /* Images.xcassets in Resources */,
-				66406DF91A20A3E90031EE6B /* Images.xcassets in Resources */,
 				66AE123C1A1F59DD00613EA6 /* LaunchScreen.xib in Resources */,
 				66AE12391A1F59DD00613EA6 /* Images.xcassets in Resources */,
 			);
@@ -465,7 +462,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				66406DF71A20A3E30031EE6B /* Images.xcassets in Resources */,
-				66406DF81A20A3E80031EE6B /* Images.xcassets in Resources */,
 				66D316141A1FC38E00F2C7E3 /* GameOn Watch App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,8 +510,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A291BF81A20B68300543EF8 /* Game.m in Sources */,
+				7A291BFE1A20D24500543EF8 /* InterfaceController.m in Sources */,
 				7A291BF51A20B59E00543EF8 /* User.m in Sources */,
-				66D3160E1A1FC38E00F2C7E3 /* InterfaceController.m in Sources */,
 				7A291BFB1A20B6DB00543EF8 /* Match.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

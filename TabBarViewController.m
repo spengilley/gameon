@@ -73,25 +73,34 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"Getting feed...");
         
-        NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
-        NSURL *url = [NSURL URLWithString:@"matches/current_match" relativeToURL:baseUrl];
+//        NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
+//        NSURL *url = [NSURL URLWithString:@"matches/current_match" relativeToURL:baseUrl];
+//        
+//        NSFileManager *fileManager = [[NSFileManager alloc] init];
+//        NSArray *files = [fileManager contentsOfDirectoryAtURL:url includingPropertiesForKeys:nil options:0 error:nil];
+//        
+//        NSMutableDictionary *matches = [[NSMutableDictionary alloc] init];
         
-        NSFileManager *fileManager = [[NSFileManager alloc] init];
-        NSArray *files = [fileManager contentsOfDirectoryAtURL:url includingPropertiesForKeys:nil options:0 error:nil];
+//        if(files != nil){
+//            for(NSString *file in files) {
+//                Match *match = [[Match alloc] initWithID:file];
+//                if (match != nil) {
+//                    [matches setObject:match forKey:file];
+//                }
+//            }
+//            
+//            [self updateFeedViewController:matches];
+//        }
         
-        NSMutableDictionary *matches = [[NSMutableDictionary alloc] init];
+        NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.adam"];
+        NSInteger myScore = [[sharedDefaults valueForKey:@"MyScore"] integerValue];
+        NSInteger theirScore = [[sharedDefaults valueForKey:@"TheirScore"] integerValue];
+        NSString *myUsername = [sharedDefaults valueForKey:@"MyUsername"];
+        NSString *theirUsername = [sharedDefaults valueForKey:@"TheirUsername"];
+
+        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:myScore], @"MyScore", [NSNumber numberWithInteger:theirScore], @"TheirScore", myUsername, @"MyUsername", theirUsername, @"TheirUsername" , nil];
         
-        if(files != nil){
-            for(NSString *file in files) {
-                Match *match = [[Match alloc] initWithID:file];
-                if (match != nil) {
-                    [matches setObject:match forKey:file];
-                }
-            }
-            
-            [self updateFeedViewController:matches];
-        }
-        
+        [self updateFeedViewController:dict];
         
     });
 }

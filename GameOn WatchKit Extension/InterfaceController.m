@@ -35,7 +35,9 @@
 @property NSInteger opponentScore;
 @property NSString *matchID;
 
-@property NSDate *gameStartDate;
+@property (strong, nonatomic) NSDate *gameStartDate;
+
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *startButton;
 
 
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *scoreLabel;
@@ -169,7 +171,14 @@
         match.myUser = me;
         match.theirUser = them;
         
-        [match save];
+//        [match save];
+        NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.adam"];
+        
+        [sharedDefaults setObject:[NSNumber numberWithInt:self.yourScore] forKey:@"MyScore"];
+        [sharedDefaults setObject:[NSNumber numberWithInt:self.opponentScore] forKey:@"TheirScore"];
+        [sharedDefaults setObject:me.username forKey:@"MyUsername"];
+        [sharedDefaults setObject:them.username forKey:@"TheirUsername"];
+        [sharedDefaults synchronize];
         
     });
 }

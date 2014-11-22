@@ -88,10 +88,10 @@ NSString *const gamesKey = @"games key";
 
 -(void)save
 {
-    NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"matches/%@", self.matchId] relativeToURL:baseUrl];
-    NSString *filePath = [url absoluteString];
-    [NSKeyedArchiver archiveRootObject:self toFile:filePath];
+//    NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
+//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"matches/%@", self.matchId] relativeToURL:baseUrl];
+//    NSString *filePath = [url absoluteString];
+//    [NSKeyedArchiver archiveRootObject:self toFile:filePath];
 }
 
 

@@ -16,6 +16,7 @@
 
 @property (strong, nonatomic) User *user;
 @property (strong, nonatomic) NSArray *rowValues;
+@property (strong, nonatomic) NSMutableDictionary *fuckingDefaults;
 @end
 
 @implementation FeedViewController
@@ -44,13 +45,15 @@
 
 -(void) setMatches:(NSNotification *)notifications {
 
-    NSDictionary *newMatches = [notifications.userInfo objectForKey:@"matches"];
+    self.fuckingDefaults = [notifications.userInfo objectForKey:@"matches"];
     
-    self.rowValues = [[NSArray alloc] init];
+//    self.rowValues = [[NSArray alloc] init];
+//    
+//    for (Match *match in newMatches) {
+//        [self.rowValues arrayByAddingObject:match];
+//    }
     
-    for (Match *match in newMatches) {
-        [self.rowValues arrayByAddingObject:match];
-    }
+    
     
     [self.tableView reloadData];
 }
@@ -79,36 +82,50 @@
     cell.gamesContaingView.layer.cornerRadius = 6;
     cell.scoreContainingView.layer.cornerRadius = 6;
     
-    Match *match = [self.rowValues objectAtIndex:indexPath.row];
-    
-    cell.myAvatar.image = match.myUser.image;
-    cell.myAvatar.layer.cornerRadius = cell.myAvatar.frame.size.width / 2;
-    cell.myAvatar.layer.masksToBounds = YES;
-    cell.myAvatar.layer.borderWidth = 1.0;
-    cell.myAvatar.layer.borderColor = [[UIColor colorWithRed:146.0/255.0 green:146.0/255.0 blue:146.0/255.0 alpha:1.0] CGColor];
-    
-    NSInteger myScore = 0;
-    NSInteger theirScore = 0;
-    NSString *myGameScores;
-    NSString *theirGameScores;
-    NSString *gameDurations;
-    
-    for(Game *game in match.games) {
-        myGameScores = [myGameScores stringByAppendingString:[NSString stringWithFormat:@"%@%@", game.myScore, @"\n"]];
-        theirGameScores = [theirGameScores stringByAppendingString:[NSString stringWithFormat:@"%@%@", game.theirScore, @"\n"]];
-        gameDurations = [gameDurations stringByAppendingString:[NSString stringWithFormat:@"%@%@", [game getDuration], @"\n"]];
+    if(self.fuckingDefaults != nil) {
+        cell.myScore.text = [NSString stringWithFormat:@"%@", [self.fuckingDefaults valueForKey:@"MyScore"]];
+        cell.theirScore.text = [NSString stringWithFormat:@"%@", [self.fuckingDefaults valueForKey:@"TheirScore"]];
+        cell.myAvatar.image = self.user.image;
         
-        myScore = myScore + [game.myScore integerValue];
-        theirScore = theirScore + [game.theirScore integerValue];
-        
+    } else {
+        cell.myScore.text = @"0";
+        cell.theirScore.text = @"0";
     }
     
-    cell.myGameDetails.text = myGameScores;
-    cell.theirGameDetails.text = theirGameScores;
-    cell.gameDuration.text = gameDurations;
+    cell.myGameDetails.text = @"11\n3\n15";
+    cell.theirGameDetails.text = @"5\n11\n13";
+    cell.gameDuration.text = @"15 mins\n13 mins\n25 mins";
     
-    cell.myScore.text = [NSString stringWithFormat:@"%ld", myScore];
-    cell.theirScore.text = [NSString stringWithFormat:@"%ld", theirScore];
+//    Match *match = [self.rowValues objectAtIndex:indexPath.row];
+//    
+//    cell.myAvatar.image = match.myUser.image;
+//    cell.myAvatar.layer.cornerRadius = cell.myAvatar.frame.size.width / 2;
+//    cell.myAvatar.layer.masksToBounds = YES;
+//    cell.myAvatar.layer.borderWidth = 1.0;
+//    cell.myAvatar.layer.borderColor = [[UIColor colorWithRed:146.0/255.0 green:146.0/255.0 blue:146.0/255.0 alpha:1.0] CGColor];
+//    
+//    NSInteger myScore = 0;
+//    NSInteger theirScore = 0;
+//    NSString *myGameScores;
+//    NSString *theirGameScores;
+//    NSString *gameDurations;
+//    
+//    for(Game *game in match.games) {
+//        myGameScores = [myGameScores stringByAppendingString:[NSString stringWithFormat:@"%@%@", game.myScore, @"\n"]];
+//        theirGameScores = [theirGameScores stringByAppendingString:[NSString stringWithFormat:@"%@%@", game.theirScore, @"\n"]];
+//        gameDurations = [gameDurations stringByAppendingString:[NSString stringWithFormat:@"%@%@", [game getDuration], @"\n"]];
+//        
+//        myScore = myScore + [game.myScore integerValue];
+//        theirScore = theirScore + [game.theirScore integerValue];
+//        
+//    }
+//    
+//    cell.myGameDetails.text = myGameScores;
+//    cell.theirGameDetails.text = theirGameScores;
+//    cell.gameDuration.text = gameDurations;
+//    
+//    cell.myScore.text = [NSString stringWithFormat:@"%ld", myScore];
+//    cell.theirScore.text = [NSString stringWithFormat:@"%ld", theirScore];
     
     return cell;
 }
