@@ -14,8 +14,8 @@
 @property(strong,nonatomic) NSNumber *matchId;
 @property(strong, nonatomic) User *myUser;
 @property(strong, nonatomic) User *theirUser;
-@property(strong, nonatomic) NSDate *start;
-@property(strong, nonatomic) NSDate *end;
+@property(strong, nonatomic) NSDate *matchStart;
+@property(strong, nonatomic) NSDate *matchEnd;
 @property(strong, nonatomic) NSMutableDictionary *games;
 
 -(void)addGame:(Game *)newGame withID:(NSNumber *) gameID;

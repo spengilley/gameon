@@ -11,8 +11,8 @@
 NSString *const gameIDKey = @"game id key";
 NSString *const myScoreKey = @"my score key";
 NSString *const theirScoreKey = @"their score key";
-NSString *const startKey = @"start key";
-NSString *const endKey = @"end key";
+NSString *const startKey = @"game start key";
+NSString *const endKey = @"game end key";
 
 @implementation Game
 
