@@ -25,6 +25,12 @@
 @property (weak, nonatomic) IBOutlet WKInterfaceButton *meMinus;
 
 @property NSInteger yourScore;
+@property NSInteger yourServe;
+@property NSInteger yourSide;
+
+@property NSInteger lastServe;
+@property NSInteger lastSide;
+
 @property NSInteger opponentScore;
 
 
@@ -46,6 +52,9 @@
         [self.youPlus setBackgroundImage:[UIImage imageNamed:@"plus"]];
         [self.meMinus setBackgroundImage:[UIImage imageNamed:@"minus"]];
         [self.youMinus setBackgroundImage:[UIImage imageNamed:@"minus"]];
+        
+        self.yourServe = 1;
+        self.yourSide = 1;
 
     }
     
@@ -54,30 +63,69 @@
 
 - (IBAction)mePlusPressed {
     
-    self.yourScore = self.yourScore+1;
+    self.lastServe = self.yourServe;
+    self.lastSide = self.yourSide;
+    
+    if (self.yourServe==1) {
+        self.yourScore = self.yourScore+1;
+        [self swapSides];
+    } else {
+        self.yourServe = 1;
+    }
+
     [self updateScore];
 }
 
 - (IBAction)youPlusPressed {
     
-    self.opponentScore = self.opponentScore + 1;
+    if (self.yourServe==0) {
+        self.opponentScore = self.opponentScore + 1;
+        [self swapSides];
+    } else {
+        self.yourServe = 0;
+    }
     [self updateScore];
 }
 
-- (IBAction)youMinusPressed {
+-(void)swapSides {
+    
+    if (self.yourSide==1) {
+        self.yourSide=0;
+    } else {
+        self.yourSide=1;
+    }
+}
 
-    self.opponentScore = self.opponentScore - 1;
+- (IBAction)youMinusPressed {
+    
+    [self resetSides];
+    
+    if (self.yourServe==0) {
+        self.opponentScore = self.opponentScore - 1;
+    }
     [self updateScore];
 }
 
 - (IBAction)meMinusPressed {
     
-    self.yourScore = self.yourScore - 1;
+    [self resetSides];
+    
+    if (self.yourServe==1) {
+        self.yourScore = self.yourScore - 1;
+    }
     [self updateScore];
+}
+
+-(void)resetSides
+{
+    self.yourServe = self.lastServe;
+    self.yourSide = self.lastSide;
 }
 
 - (void) updateScore
 {
+    NSLog( @"Your server %ld Your Side %ld",(long)self.yourServe,(long)self.yourSide );
+    
     self.scoreLabel.text = [NSString stringWithFormat:@"%ld - %ld",(long)self.yourScore,(long)self.opponentScore];
 }
 
