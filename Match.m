@@ -19,6 +19,18 @@ NSString *const gamesKey = @"games key";
 @implementation Match
 
 
+
+- (instancetype)initWithID:(NSString *) ID
+{
+    self = [super init];
+    if (self) {
+        self.matchId = ID;
+        [self buildFromFile];
+    }
+    return self;
+}
+
+
 -(void) addGame:(Game *)newGame withID:(NSNumber *)gameID {
     [self.games setObject:newGame forKey:gameID];
 }
@@ -36,7 +48,6 @@ NSString *const gamesKey = @"games key";
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super init];
     if (self != nil){
-       // _gameID = [aDecoder decodeObjectForKey:gameIDKey];
         _matchId = [aDecoder decodeObjectForKey:matchIDKey];
         _myUser = [aDecoder decodeObjectForKey:myUserKey];
         _theirUser = [aDecoder decodeObjectForKey:theirUserKey];
