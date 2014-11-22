@@ -15,7 +15,9 @@
 //
 
 #import "InterfaceController.h"
-
+#import "Match.h"
+#import "Game.h"
+#import "User.h"
 
 @interface InterfaceController()
 
@@ -24,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet WKInterfaceButton *youMinus;
 @property (weak, nonatomic) IBOutlet WKInterfaceButton *meMinus;
 
+@property NSInteger myScore;
 @property NSInteger yourScore;
 @property NSInteger yourServe;
 @property NSInteger yourSide;
@@ -33,6 +36,8 @@
 
 @property NSInteger opponentScore;
 @property NSString *matchID;
+
+@property NSDate *gameStartDate;
 
 
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *scoreLabel;
@@ -55,6 +60,8 @@
         [self.youMinus setBackgroundImage:[UIImage imageNamed:@"minus"]];
         
         self.matchID = [[NSUUID UUID] UUIDString];
+        self.gameStartDate = [[NSDate alloc] init];
+        
         NSLog(@"new match with id %@", self.matchID);
 
     }
@@ -135,11 +142,26 @@
 -(void) updateFeed
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
-        NSURL *url = [NSURL URLWithString:@"matches/current_match" relativeToURL:baseUrl];
-        NSString *fileContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+        Match *match = [[Match alloc] initWithID:self.matchID];
+        [match buildFromFile];
         
+        Game *game = [[Game alloc] init];
+        game.myScore = [NSNumber numberWithInteger:self.myScore];
+        game.theirScore = [NSNumber numberWithInteger:self.yourScore];
+        game.start = self.gameStartDate;
+        [match addGame:game withID:game.gameID];
         
+        User* me = [[User alloc] init];
+        me.username = @"Adam";
+        //me.image = [UIImage alloc] initWithContentsOfFile:<#(NSString *)#>
+        
+        User *them = [[User alloc] init];
+        them.username = @"Kass";
+        
+        match.myUser = me;
+        match.theirUser = them;
+        
+        [match save];
         
     });
 }

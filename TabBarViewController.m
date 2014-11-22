@@ -10,6 +10,7 @@
 #import "WhoAreYouViewController.h"
 #import "ProfileViewController.h"
 #import "User.h"
+#import "Match.h"
 
 @interface TabBarViewController ()
 
@@ -34,7 +35,11 @@
     feedTab.image = [[UIImage imageNamed:@"feed"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     feedTab.selectedImage = [UIImage imageNamed:@"feed"];
     
-    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateFeeds) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(getFeed) userInfo:nil repeats:YES];
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,22 +68,42 @@
     }
 }
 
--(void) updateFeeds
+-(void) getFeed
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
-        NSURL *url = [NSURL URLWithString:@"current_match" relativeToURL:baseUrl];
-        NSString *fileContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-        NSData *data = [NSData dataWithContentsOfFile:fileContent];
+        NSLog(@"Getting feed...");
         
-        if (data != nil) {
-            NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            for (NSString *item in dictionary) {
-                NSLog(@"%@", item);
+        NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
+        NSURL *url = [NSURL URLWithString:@"matches/current_match" relativeToURL:baseUrl];
+        
+        NSFileManager *fileManager = [[NSFileManager alloc] init];
+        NSArray *files = [fileManager contentsOfDirectoryAtURL:url includingPropertiesForKeys:nil options:0 error:nil];
+        
+        NSMutableDictionary *matches = [[NSMutableDictionary alloc] init];
+        
+        if(files != nil){
+            for(NSString *file in files) {
+                Match *match = [[Match alloc] initWithID:file];
+                if (match != nil) {
+                    [matches setObject:match forKey:file];
+                }
             }
+            
+            [self updateFeedViewController:matches];
         }
         
+        
     });
+}
+
+-(void) updateFeedViewController:(NSDictionary *) withMatches {
+
+    NSNotification *notification =
+    [NSNotification
+     notificationWithName:@"MATCHES"
+     object:nil
+     userInfo: [NSDictionary dictionaryWithObjectsAndKeys:withMatches,@"matches", nil]];
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
 }
 
 /*

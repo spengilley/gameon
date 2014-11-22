@@ -8,13 +8,14 @@
 
 #import "FeedViewController.h"
 #import "User.h"
+#import "Match.h"
+#import "Game.h"
 #import "FeedItemTableViewCell.h"
 
 @interface FeedViewController ()
 
-@property (strong, nonatomic) NSMutableDictionary *rowValues;
 @property (strong, nonatomic) User *user;
-
+@property (strong, nonatomic) NSArray *rowValues;
 @end
 
 @implementation FeedViewController
@@ -29,8 +30,29 @@
     
     [self configureNavigationBar];
     
-    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(getFeed) userInfo:nil repeats:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+               selector:@selector(setMatches:)
+                   name:@"MATCHES"
+                 object:nil];
+
     
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+-(void) setMatches:(NSNotification *)notifications {
+
+    NSDictionary *newMatches = [notifications.userInfo objectForKey:@"matches"];
+    
+    self.rowValues = [[NSArray alloc] init];
+    
+    for (Match *match in newMatches) {
+        [self.rowValues arrayByAddingObject:match];
+    }
+    
+    [self.tableView reloadData];
 }
 
 -(void) configureNavigationBar {
@@ -57,38 +79,40 @@
     cell.gamesContaingView.layer.cornerRadius = 6;
     cell.scoreContainingView.layer.cornerRadius = 6;
     
-    cell.myAvatar.image = self.user.image;
+    Match *match = [self.rowValues objectAtIndex:indexPath.row];
+    
+    cell.myAvatar.image = match.myUser.image;
     cell.myAvatar.layer.cornerRadius = cell.myAvatar.frame.size.width / 2;
     cell.myAvatar.layer.masksToBounds = YES;
     cell.myAvatar.layer.borderWidth = 1.0;
     cell.myAvatar.layer.borderColor = [[UIColor colorWithRed:146.0/255.0 green:146.0/255.0 blue:146.0/255.0 alpha:1.0] CGColor];
     
-    cell.myScore.text = [NSString stringWithFormat:@"%ld", indexPath.row+1];
-    cell.theirScore.text = [NSString stringWithFormat:@"%ld", indexPath.row+2];
-    cell.myGameDetails.text = @"11\n3\n15";
-    cell.theirGameDetails.text = @"5\n11\n13";
-    cell.gameDuration.text = @"15 mins\n13 mins\n25 mins";
-     
+    NSInteger myScore = 0;
+    NSInteger theirScore = 0;
+    NSString *myGameScores;
+    NSString *theirGameScores;
+    NSString *gameDurations;
+    
+    for(Game *game in match.games) {
+        myGameScores = [myGameScores stringByAppendingString:[NSString stringWithFormat:@"%@%@", game.myScore, @"\n"]];
+        theirGameScores = [theirGameScores stringByAppendingString:[NSString stringWithFormat:@"%@%@", game.theirScore, @"\n"]];
+        gameDurations = [gameDurations stringByAppendingString:[NSString stringWithFormat:@"%@%@", [game getDuration], @"\n"]];
+        
+        myScore = myScore + [game.myScore integerValue];
+        theirScore = theirScore + [game.theirScore integerValue];
+        
+    }
+    
+    cell.myGameDetails.text = myGameScores;
+    cell.theirGameDetails.text = theirGameScores;
+    cell.gameDuration.text = gameDurations;
+    
+    cell.myScore.text = [NSString stringWithFormat:@"%ld", myScore];
+    cell.theirScore.text = [NSString stringWithFormat:@"%ld", theirScore];
+    
     return cell;
 }
 
--(void) getFeed
-{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
-        NSURL *url = [NSURL URLWithString:@"current_match" relativeToURL:baseUrl];
-        NSString *fileContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-        NSData *data = [NSData dataWithContentsOfFile:fileContent];
-        
-        if (data != nil) {
-            NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            for (NSString *item in dictionary) {
-                NSLog(@"%@", item);
-            }
-        }
-        
-    });
-}
 
 
 /*

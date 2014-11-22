@@ -61,7 +61,7 @@ NSString *const gamesKey = @"games key";
 -(void)buildFromFile
 {
     NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
-    NSURL *url = [NSURL URLWithString:self.matchId relativeToURL:baseUrl];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"matches/%@", self.matchId] relativeToURL:baseUrl];
     NSString *filePath = [url absoluteString];
     
     Match *matchOnDisk = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
@@ -89,7 +89,7 @@ NSString *const gamesKey = @"games key";
 -(void)save
 {
     NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
-    NSURL *url = [NSURL URLWithString:self.matchId relativeToURL:baseUrl];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"matches/%@", self.matchId] relativeToURL:baseUrl];
     NSString *filePath = [url absoluteString];
     [NSKeyedArchiver archiveRootObject:self toFile:filePath];
 }

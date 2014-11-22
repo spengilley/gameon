@@ -56,7 +56,7 @@ NSString *const endKey = @"game end key";
     [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
     
     if (!gameOnDisk) {
-        self.gameID = [[NSNumber alloc] initWithInt:0];
+        self.gameID = [[NSUUID UUID] UUIDString];
         self.myScore = [[NSNumber alloc] initWithInt:arc4random_uniform(3)];
         self.theirScore = [[NSNumber alloc] initWithInt:arc4random_uniform(3)];
         

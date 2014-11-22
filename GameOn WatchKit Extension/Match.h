@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <WatchKit/WatchKit.h>
+
 #import "User.h"
 #import "Game.h"
 
@@ -26,3 +28,4 @@
 -(void)save;
 
 @end
+

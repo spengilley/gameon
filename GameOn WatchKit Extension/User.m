@@ -56,12 +56,10 @@ NSString *const largeImageKey = @"largeImageKey";
     
     User *userOnDisk =
     [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
- 
+    
     if (!userOnDisk) {
-        self.userID = [[NSNumber alloc] initWithInt:0];
+        self.userID = [[NSUUID UUID] UUIDString];
         self.username = @"";
-        self.image = [UIImage imageNamed:@"large_avatar"];
-        self.largeImage = [UIImage imageNamed:@"large_avatar"];
         self.pushToken = @"";
         self.locationName = @"";
     } else {
