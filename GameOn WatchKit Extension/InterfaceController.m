@@ -21,10 +21,8 @@
 
 @interface InterfaceController()
 
-@property (weak, nonatomic) IBOutlet WKInterfaceButton *mePlus;
-@property (weak, nonatomic) IBOutlet WKInterfaceButton *youPlus;
-@property (weak, nonatomic) IBOutlet WKInterfaceButton *youMinus;
-@property (weak, nonatomic) IBOutlet WKInterfaceButton *meMinus;
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *me;
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *you;
 
 @property NSInteger myScore;
 @property NSInteger yourScore;
@@ -54,19 +52,23 @@
         // Configure interface objects here.
         NSLog(@"%@ initWithContext", self);
         
-        [self.mePlus setBackgroundImage:[UIImage imageNamed:@"plus"]];
-        [self.youPlus setBackgroundImage:[UIImage imageNamed:@"plus"]];
-        [self.meMinus setBackgroundImage:[UIImage imageNamed:@"minus"]];
-        [self.youMinus setBackgroundImage:[UIImage imageNamed:@"minus"]];
+        self.yourServe=1;
         
         self.matchID = [[NSUUID UUID] UUIDString];
         self.gameStartDate = [[NSDate alloc] init];
         
         NSLog(@"new match with id %@", self.matchID);
-
     }
     
     return self;
+}
+
+- (IBAction)endGameYes {
+    NSLog( @"Yes pressed" );
+}
+
+- (IBAction)endGameNo {
+    NSLog( @"No pressed" );
 }
 
 - (IBAction)mePlusPressed {
@@ -78,6 +80,8 @@
         self.yourScore = self.yourScore+1;
         [self swapSides];
     } else {
+        [self.me setImage:[UIImage imageNamed:@"kass_serving"]];
+        [self.you setImage:[UIImage imageNamed:@"adam"]];
         self.yourServe = 1;
     }
 
@@ -90,6 +94,8 @@
         self.opponentScore = self.opponentScore + 1;
         [self swapSides];
     } else {
+        [self.me setImage:[UIImage imageNamed:@"kass"]];
+        [self.you setImage:[UIImage imageNamed:@"adam_serving"]];
         self.yourServe = 0;
     }
     [self updateScore];

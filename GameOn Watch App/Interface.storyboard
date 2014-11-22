@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RdA-z4-kZh">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
@@ -8,69 +8,85 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController"/>
-            </objects>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="xOd-z6-aP9">
-            <objects>
-                <controller id="RdA-z4-kZh" customClass="InterfaceController">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <group width="134" height="52" alignment="left" hasDetent="YES" id="L3l-N8-Qdr">
+                        <group width="134" height="47" alignment="left" hasDetent="YES" id="qIH-Ji-ang">
                             <items>
-                                <button width="52" height="54" alignment="left" id="Nc5-6x-CyJ">
-                                    <color key="titleColor" red="0.17254901959999999" green="0.7725490196" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                <button alignment="left" id="MnJ-0I-r7z">
+                                    <group key="contentGroup" width="38" height="47" alignment="left" id="gKi-rl-dZy">
+                                        <items>
+                                            <imageView width="15" height="15" alignment="center" verticalAlignment="center" image="minus" id="5vO-PP-UpP"/>
+                                        </items>
+                                    </group>
                                     <connections>
-                                        <action selector="meMinusPressed" destination="RdA-z4-kZh" id="h3J-mk-hh4"/>
+                                        <action selector="meMinusPressed" destination="AgC-eL-Hgc" id="8KG-j3-vN1"/>
                                     </connections>
                                 </button>
-                                <label width="27.5" height="54.5" alignment="left" text="Me" textAlignment="center" id="xee-I5-d6Z"/>
-                                <button width="52" height="54" alignment="left" id="7oG-Cn-XAA">
+                                <imageView width="57" height="44" alignment="left" image="kass_serving" contentMode="scaleAspectFit" id="HZd-Xm-kfP"/>
+                                <button alignment="left" id="Jx0-hw-Wyt">
+                                    <group key="contentGroup" width="33" height="46" alignment="left" id="qgB-ae-o5d">
+                                        <items>
+                                            <imageView width="15" height="15" alignment="center" verticalAlignment="center" image="plus" id="zEV-ZN-5ui"/>
+                                        </items>
+                                    </group>
                                     <connections>
-                                        <action selector="mePlusPressed" destination="RdA-z4-kZh" id="yyc-wC-Ew8"/>
-                                    </connections>
-                                </button>
-                            </items>
-                        </group>
-                        <label width="136" height="37.5" alignment="left" text="0 - 0" textAlignment="center" id="IPd-ZZ-Nex"/>
-                        <group width="1" height="52" alignment="left" hasDetent="YES" id="RjO-jB-z3Z">
-                            <items>
-                                <button width="52" height="54" alignment="left" id="NKD-fQ-xNz">
-                                    <connections>
-                                        <action selector="youMinusPressed" destination="RdA-z4-kZh" id="ltX-qO-haH"/>
-                                    </connections>
-                                </button>
-                                <label width="27.5" height="54.5" alignment="left" text="You" textAlignment="center" id="ulC-WP-K9t"/>
-                                <button width="52" height="54" alignment="left" id="d8E-Ou-5b3">
-                                    <connections>
-                                        <action selector="youPlusPressed" destination="RdA-z4-kZh" id="GLH-qn-x0d"/>
+                                        <action selector="mePlusPressed" destination="AgC-eL-Hgc" id="N36-LH-hck"/>
                                     </connections>
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" hasDetent="YES" id="2uC-xD-uql">
+                        <label width="136" height="42.5" alignment="left" text="0 - 0" textAlignment="center" id="iI8-XD-bZQ">
+                            <color key="textColor" red="0.91505078184383615" green="0.92267245318134949" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                        </label>
+                        <group width="134" height="46" alignment="left" hasDetent="YES" id="Gta-N0-WX3">
                             <items>
-                                <button width="1" alignment="left" title="Pause" id="rhI-sq-J3e"/>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" hasDetent="YES" id="gSb-JP-YdS">
-                            <items>
-                                <button width="1" alignment="left" title="End Game" id="E0Y-wi-ulh"/>
+                                <button alignment="left" id="p3u-fT-aYu">
+                                    <group key="contentGroup" width="38" height="47" alignment="left" id="tbv-NH-fJd">
+                                        <items>
+                                            <imageView width="15" height="15" alignment="center" verticalAlignment="center" image="minus" id="L4o-xE-Dfg"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="youMinusPressed" destination="AgC-eL-Hgc" id="5qs-xE-Syu"/>
+                                    </connections>
+                                </button>
+                                <imageView width="57" height="44" alignment="left" image="adam" contentMode="scaleAspectFit" id="5j4-FJ-EmX"/>
+                                <button alignment="left" id="c47-Xh-Gqw">
+                                    <group key="contentGroup" width="33" height="46" alignment="left" id="lsm-pW-J5U">
+                                        <items>
+                                            <imageView width="15" height="15" alignment="center" verticalAlignment="center" image="plus" id="KhD-FX-m1s"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="youPlusPressed" destination="AgC-eL-Hgc" id="mdk-SA-HF2"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
-                    <color key="backgroundColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <menu key="menu" id="8oH-g6-nRf">
+                        <items>
+                            <menuItem title="End Game Yes" icon="accept" id="iFl-f7-10z">
+                                <connections>
+                                    <action selector="endGameYes" destination="AgC-eL-Hgc" id="w4Y-Np-X6B"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="No" icon="decline" id="yhC-Bc-1Y7">
+                                <connections>
+                                    <action selector="endGameNo" destination="AgC-eL-Hgc" id="R3y-Od-s7k"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
-                        <outlet property="meMinus" destination="Nc5-6x-CyJ" id="tMP-8q-wbW"/>
-                        <outlet property="mePlus" destination="7oG-Cn-XAA" id="2CR-kf-erz"/>
-                        <outlet property="scoreLabel" destination="IPd-ZZ-Nex" id="7i7-Ix-0xe"/>
-                        <outlet property="youMinus" destination="NKD-fQ-xNz" id="0qj-jt-dEE"/>
-                        <outlet property="youPlus" destination="d8E-Ou-5b3" id="ZHR-Ix-Zkq"/>
+                        <outlet property="me" destination="HZd-Xm-kfP" id="xZz-Of-uPy"/>
+                        <outlet property="scoreLabel" destination="iI8-XD-bZQ" id="PYk-gP-4dv"/>
+                        <outlet property="you" destination="5j4-FJ-EmX" id="MEv-tf-hXN"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="269" y="270.75"/>
+            <point key="canvasLocation" x="155" y="264"/>
         </scene>
     </scenes>
 </document>

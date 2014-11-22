@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6669B1101A1FD110006E34E1 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6669B10D1A1FD057006E34E1 /* Storyboard.storyboard */; };
-		6669B1121A1FD434006E34E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AE12701A1F59EF00613EA6 /* Images.xcassets */; };
+		66312ECC1A20A87200AA1A41 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D3160D1A1FC38E00F2C7E3 /* InterfaceController.m */; };
+		66312ECD1A20AAFA00AA1A41 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D3161A1A1FC38E00F2C7E3 /* Interface.storyboard */; };
+		66406DF61A20A3E10031EE6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3160F1A1FC38E00F2C7E3 /* Images.xcassets */; };
+		66406DF71A20A3E30031EE6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3160F1A1FC38E00F2C7E3 /* Images.xcassets */; };
+		66406DF81A20A3E80031EE6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3161C1A1FC38E00F2C7E3 /* Images.xcassets */; };
+		66406DF91A20A3E90031EE6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3161C1A1FC38E00F2C7E3 /* Images.xcassets */; };
+		66406DFA1A20A3EC0031EE6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3160F1A1FC38E00F2C7E3 /* Images.xcassets */; };
 		66AE122B1A1F59DD00613EA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE122A1A1F59DD00613EA6 /* main.m */; };
 		66AE122E1A1F59DD00613EA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE122D1A1F59DD00613EA6 /* AppDelegate.m */; };
 		66AE12371A1F59DD00613EA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AE12351A1F59DD00613EA6 /* Main.storyboard */; };
@@ -22,10 +27,7 @@
 		66AE128A1A1F65AA00613EA6 /* ManageAvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE12891A1F65AA00613EA6 /* ManageAvatarViewController.m */; };
 		66AE12901A1F695C00613EA6 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE128F1A1F695C00613EA6 /* TabBarViewController.m */; };
 		66D316081A1FC38E00F2C7E3 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66AE12571A1F59EF00613EA6 /* WatchKit.framework */; };
-		66D3160E1A1FC38E00F2C7E3 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D3160D1A1FC38E00F2C7E3 /* InterfaceController.m */; };
-		66D316101A1FC38E00F2C7E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3160F1A1FC38E00F2C7E3 /* Images.xcassets */; };
 		66D316141A1FC38E00F2C7E3 /* GameOn Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 66D316131A1FC38E00F2C7E3 /* GameOn Watch App.app */; };
-		66D3161B1A1FC38E00F2C7E3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D3161A1A1FC38E00F2C7E3 /* Interface.storyboard */; };
 		66D3161D1A1FC38E00F2C7E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D3161C1A1FC38E00F2C7E3 /* Images.xcassets */; };
 		66D316201A1FC38E00F2C7E3 /* GameOn WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66D316071A1FC38E00F2C7E3 /* GameOn WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7A25EF661A1F7A7900B633A1 /* FeedItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A25EF651A1F7A7900B633A1 /* FeedItemTableViewCell.m */; };
@@ -75,7 +77,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6669B10D1A1FD057006E34E1 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		66AE12251A1F59DD00613EA6 /* GameOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66AE12291A1F59DD00613EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AE122A1A1F59DD00613EA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,15 +89,6 @@
 		66AE12461A1F59DD00613EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AE12471A1F59DD00613EA6 /* RakettoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RakettoTests.m; sourceTree = "<group>"; };
 		66AE12571A1F59EF00613EA6 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
-		66AE125B1A1F59EF00613EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66AE125C1A1F59EF00613EA6 /* PushNotificationPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PushNotificationPayload.json; sourceTree = "<group>"; };
-		66AE125D1A1F59EF00613EA6 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
-		66AE125E1A1F59EF00613EA6 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
-		66AE12601A1F59EF00613EA6 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
-		66AE12611A1F59EF00613EA6 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
-		66AE12631A1F59EF00613EA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		66AE126D1A1F59EF00613EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66AE12701A1F59EF00613EA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		66AE127C1A1F5AAB00613EA6 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		66AE127D1A1F5AAB00613EA6 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		66AE127F1A1F5AF700613EA6 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -181,8 +173,6 @@
 				66AE127D1A1F5AAB00613EA6 /* FeedViewController.m */,
 				66AE12271A1F59DD00613EA6 /* Raketto */,
 				66AE12441A1F59DD00613EA6 /* RakettoTests */,
-				66AE12591A1F59EF00613EA6 /* Raketto WatchKit Extension */,
-				66AE126B1A1F59EF00613EA6 /* Raketto Watch App */,
 				66D316091A1FC38E00F2C7E3 /* GameOn WatchKit Extension */,
 				66D316171A1FC38E00F2C7E3 /* GameOn Watch App */,
 				66AE12561A1F59EF00613EA6 /* Frameworks */,
@@ -246,46 +236,6 @@
 				66AE12571A1F59EF00613EA6 /* WatchKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		66AE12591A1F59EF00613EA6 /* Raketto WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				66AE125D1A1F59EF00613EA6 /* InterfaceController.h */,
-				66AE125E1A1F59EF00613EA6 /* InterfaceController.m */,
-				66AE12601A1F59EF00613EA6 /* NotificationController.h */,
-				66AE12611A1F59EF00613EA6 /* NotificationController.m */,
-				66AE12631A1F59EF00613EA6 /* Images.xcassets */,
-				66AE125A1A1F59EF00613EA6 /* Supporting Files */,
-			);
-			path = "Raketto WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		66AE125A1A1F59EF00613EA6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				66AE125B1A1F59EF00613EA6 /* Info.plist */,
-				66AE125C1A1F59EF00613EA6 /* PushNotificationPayload.json */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		66AE126B1A1F59EF00613EA6 /* Raketto Watch App */ = {
-			isa = PBXGroup;
-			children = (
-				66AE12701A1F59EF00613EA6 /* Images.xcassets */,
-				66AE126C1A1F59EF00613EA6 /* Supporting Files */,
-				6669B10D1A1FD057006E34E1 /* Storyboard.storyboard */,
-			);
-			path = "Raketto Watch App";
-			sourceTree = "<group>";
-		};
-		66AE126C1A1F59EF00613EA6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				66AE126D1A1F59EF00613EA6 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		66D316091A1FC38E00F2C7E3 /* GameOn WatchKit Extension */ = {
@@ -443,6 +393,7 @@
 				TargetAttributes = {
 					66AE12241A1F59DD00613EA6 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = MN774DNFG9;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -464,6 +415,7 @@
 					};
 					66D316121A1FC38E00F2C7E3 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = MN774DNFG9;
 					};
 				};
 			};
@@ -494,6 +446,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				66AE12371A1F59DD00613EA6 /* Main.storyboard in Resources */,
+				66406DFA1A20A3EC0031EE6B /* Images.xcassets in Resources */,
+				66406DF91A20A3E90031EE6B /* Images.xcassets in Resources */,
 				66AE123C1A1F59DD00613EA6 /* LaunchScreen.xib in Resources */,
 				66AE12391A1F59DD00613EA6 /* Images.xcassets in Resources */,
 			);
@@ -510,9 +464,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6669B1121A1FD434006E34E1 /* Images.xcassets in Resources */,
+				66406DF71A20A3E30031EE6B /* Images.xcassets in Resources */,
+				66406DF81A20A3E80031EE6B /* Images.xcassets in Resources */,
 				66D316141A1FC38E00F2C7E3 /* GameOn Watch App.app in Resources */,
-				66D316101A1FC38E00F2C7E3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,9 +474,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66D3161B1A1FC38E00F2C7E3 /* Interface.storyboard in Resources */,
 				66D3161D1A1FC38E00F2C7E3 /* Images.xcassets in Resources */,
-				6669B1101A1FD110006E34E1 /* Storyboard.storyboard in Resources */,
+				66312ECD1A20AAFA00AA1A41 /* Interface.storyboard in Resources */,
+				66406DF61A20A3E10031EE6B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +705,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -769,6 +724,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IBSC_MODULE = GameOn_WatchKit_Extension;
 				INFOPLIST_FILE = "GameOn Watch App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
