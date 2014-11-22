@@ -11,7 +11,7 @@
 #import "Game.h"
 
 @interface Match : NSObject
-@property(strong,nonatomic) NSNumber *matchId;
+@property(strong,nonatomic) NSString *matchId;
 @property(strong, nonatomic) User *myUser;
 @property(strong, nonatomic) User *theirUser;
 @property(strong, nonatomic) NSDate *matchStart;
