@@ -11,8 +11,8 @@
 NSString *const matchIDKey = @"match id key";
 NSString *const myUserKey = @"me user key";
 NSString *const theirUserKey = @"their user key";
-NSString *const startKey = @"start key";
-NSString *const endKey = @"end key";
+NSString *const matchStartKey = @"match start key";
+NSString *const matchEndKey = @"match end key";
 NSString *const gamesKey = @"games key";
 
 
@@ -29,13 +29,21 @@ NSString *const gamesKey = @"games key";
     [aCoder encodeObject:self.matchId forKey:matchIDKey];
     [aCoder encodeObject:self.myUser forKey:myUserKey];
     [aCoder encodeObject:self.theirUser forKey:theirUserKey];
-    
+    [aCoder encodeObject:self.matchStart forKey:matchStartKey];
+    [aCoder encodeObject:self.matchEnd forKey:matchEndKey];
+    [aCoder encodeObject:self.games forKey:gamesKey];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super init];
     if (self != nil){
        // _gameID = [aDecoder decodeObjectForKey:gameIDKey];
+        _matchId = [aDecoder decodeObjectForKey:matchIDKey];
+        _myUser = [aDecoder decodeObjectForKey:myUserKey];
+        _theirUser = [aDecoder decodeObjectForKey:theirUserKey];
+        _matchStart = [aDecoder decodeObjectForKey:matchStartKey];
+        _matchEnd = [aDecoder decodeObjectForKey:matchEndKey];
+        _games = [aDecoder decodeObjectForKey:gamesKey];
     }
     return self;
 }
@@ -43,11 +51,11 @@ NSString *const gamesKey = @"games key";
 
 -(void)buildFromFile
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"game.txt"];
+    NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
+    NSURL *url = [NSURL URLWithString:@"current_match" relativeToURL:baseUrl];
+    NSString *filePath = [url absoluteString];
     
-    Game *gameOnDisk =
+//    Game *gameOnDisk =
     [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
     
 //    if (!gameOnDisk) {
