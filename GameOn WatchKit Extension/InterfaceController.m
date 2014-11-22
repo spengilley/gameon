@@ -26,6 +26,7 @@
 
 @property NSInteger yourScore;
 @property NSInteger opponentScore;
+@property NSString *matchID;
 
 
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *scoreLabel;
@@ -46,6 +47,9 @@
         [self.youPlus setBackgroundImage:[UIImage imageNamed:@"plus"]];
         [self.meMinus setBackgroundImage:[UIImage imageNamed:@"minus"]];
         [self.youMinus setBackgroundImage:[UIImage imageNamed:@"minus"]];
+        
+        self.matchID = [[NSUUID UUID] UUIDString];
+        NSLog(@"new match with id %@", self.matchID);
 
     }
     
@@ -79,6 +83,20 @@
 - (void) updateScore
 {
     self.scoreLabel.text = [NSString stringWithFormat:@"%ld - %ld",(long)self.yourScore,(long)self.opponentScore];
+    
+    [self updateFeed];
+}
+
+-(void) updateFeed
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
+        NSURL *url = [NSURL URLWithString:@"matches/current_match" relativeToURL:baseUrl];
+        NSString *fileContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+        
+        
+        
+    });
 }
 
 - (void)willActivate {

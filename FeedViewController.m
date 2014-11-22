@@ -29,7 +29,7 @@
     
     [self configureNavigationBar];
     
-    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateFeeds) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(getFeed) userInfo:nil repeats:YES];
     
 }
 
@@ -70,6 +70,24 @@
     cell.gameDuration.text = @"15 mins\n13 mins\n25 mins";
      
     return cell;
+}
+
+-(void) getFeed
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
+        NSURL *url = [NSURL URLWithString:@"current_match" relativeToURL:baseUrl];
+        NSString *fileContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+        NSData *data = [NSData dataWithContentsOfFile:fileContent];
+        
+        if (data != nil) {
+            NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            for (NSString *item in dictionary) {
+                NSLog(@"%@", item);
+            }
+        }
+        
+    });
 }
 
 
