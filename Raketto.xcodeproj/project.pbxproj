@@ -29,6 +29,7 @@
 		66AE12901A1F695C00613EA6 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AE128F1A1F695C00613EA6 /* TabBarViewController.m */; };
 		7A25EF661A1F7A7900B633A1 /* FeedItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A25EF651A1F7A7900B633A1 /* FeedItemTableViewCell.m */; };
 		7A25EF6E1A1F8CAB00B633A1 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A25EF6D1A1F8CAB00B633A1 /* Game.m */; };
+		7A291BEE1A2087D600543EF8 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A291BED1A2087D600543EF8 /* Match.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,8 @@
 		7A25EF651A1F7A7900B633A1 /* FeedItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItemTableViewCell.m; sourceTree = "<group>"; };
 		7A25EF6C1A1F8CAB00B633A1 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		7A25EF6D1A1F8CAB00B633A1 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		7A291BEC1A2087D600543EF8 /* Match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Match.h; sourceTree = "<group>"; };
+		7A291BED1A2087D600543EF8 /* Match.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Match.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +276,8 @@
 				66AE12861A1F62F600613EA6 /* User.m */,
 				7A25EF6C1A1F8CAB00B633A1 /* Game.h */,
 				7A25EF6D1A1F8CAB00B633A1 /* Game.m */,
+				7A291BEC1A2087D600543EF8 /* Match.h */,
+				7A291BED1A2087D600543EF8 /* Match.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66AE122E1A1F59DD00613EA6 /* AppDelegate.m in Sources */,
+				7A291BEE1A2087D600543EF8 /* Match.m in Sources */,
 				66AE127E1A1F5AAB00613EA6 /* FeedViewController.m in Sources */,
 				66AE128A1A1F65AA00613EA6 /* ManageAvatarViewController.m in Sources */,
 				66AE12871A1F62F600613EA6 /* User.m in Sources */,
