@@ -370,6 +370,7 @@
 				TargetAttributes = {
 					66AE12241A1F59DD00613EA6 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = MN774DNFG9;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -391,6 +392,7 @@
 					};
 					66D316121A1FC38E00F2C7E3 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = MN774DNFG9;
 					};
 				};
 			};
@@ -677,6 +679,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -695,6 +698,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IBSC_MODULE = GameOn_WatchKit_Extension;
 				INFOPLIST_FILE = "GameOn Watch App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";

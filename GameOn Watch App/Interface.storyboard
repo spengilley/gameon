@@ -15,18 +15,18 @@
                                 <button alignment="left" id="MnJ-0I-r7z">
                                     <group key="contentGroup" width="38" height="47" alignment="left" id="gKi-rl-dZy">
                                         <items>
-                                            <imageView width="20" height="20" alignment="center" verticalAlignment="center" image="minus" id="5vO-PP-UpP"/>
+                                            <imageView width="15" height="15" alignment="center" verticalAlignment="center" image="minus" id="5vO-PP-UpP"/>
                                         </items>
                                     </group>
                                     <connections>
                                         <action selector="meMinusPressed" destination="AgC-eL-Hgc" id="8KG-j3-vN1"/>
                                     </connections>
                                 </button>
-                                <imageView width="57" height="44" alignment="left" image="Kass" contentMode="scaleAspectFit" id="HZd-Xm-kfP"/>
+                                <imageView width="57" height="44" alignment="left" image="kass_serving" contentMode="scaleAspectFit" id="HZd-Xm-kfP"/>
                                 <button alignment="left" id="Jx0-hw-Wyt">
                                     <group key="contentGroup" width="33" height="46" alignment="left" id="qgB-ae-o5d">
                                         <items>
-                                            <imageView width="20" height="20" alignment="center" verticalAlignment="center" image="plus" id="zEV-ZN-5ui"/>
+                                            <imageView width="15" height="15" alignment="center" verticalAlignment="center" image="plus" id="zEV-ZN-5ui"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -35,13 +35,16 @@
                                 </button>
                             </items>
                         </group>
-                        <label width="136" height="22.5" alignment="left" text="0 - 0" textAlignment="center" id="iI8-XD-bZQ"/>
+                        <label width="136" height="42.5" alignment="left" text="0 - 0" textAlignment="center" id="iI8-XD-bZQ">
+                            <color key="textColor" red="0.91505078184383615" green="0.92267245318134949" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                        </label>
                         <group width="134" height="46" alignment="left" hasDetent="YES" id="Gta-N0-WX3">
                             <items>
                                 <button alignment="left" id="p3u-fT-aYu">
                                     <group key="contentGroup" width="38" height="47" alignment="left" id="tbv-NH-fJd">
                                         <items>
-                                            <imageView width="20" height="20" alignment="center" verticalAlignment="center" image="minus" id="L4o-xE-Dfg"/>
+                                            <imageView width="15" height="15" alignment="center" verticalAlignment="center" image="minus" id="L4o-xE-Dfg"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -52,7 +55,7 @@
                                 <button alignment="left" id="c47-Xh-Gqw">
                                     <group key="contentGroup" width="33" height="46" alignment="left" id="lsm-pW-J5U">
                                         <items>
-                                            <imageView width="20" height="20" alignment="center" verticalAlignment="center" image="plus" id="KhD-FX-m1s"/>
+                                            <imageView width="15" height="15" alignment="center" verticalAlignment="center" image="plus" id="KhD-FX-m1s"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -61,19 +64,29 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" height="32.5" alignment="center" hasDetent="YES" id="TYj-a6-2Fd">
-                            <items>
-                                <imageView width="68" height="20" alignment="center" image="Start" contentMode="scaleAspectFit" id="dNo-PO-DfK"/>
-                            </items>
-                        </group>
                     </items>
+                    <menu key="menu" id="8oH-g6-nRf">
+                        <items>
+                            <menuItem title="End Game Yes" icon="accept" id="iFl-f7-10z">
+                                <connections>
+                                    <action selector="endGameYes" destination="AgC-eL-Hgc" id="w4Y-Np-X6B"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="No" icon="decline" id="yhC-Bc-1Y7">
+                                <connections>
+                                    <action selector="endGameNo" destination="AgC-eL-Hgc" id="R3y-Od-s7k"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="me" destination="HZd-Xm-kfP" id="xZz-Of-uPy"/>
                         <outlet property="scoreLabel" destination="iI8-XD-bZQ" id="PYk-gP-4dv"/>
+                        <outlet property="you" destination="5j4-FJ-EmX" id="MEv-tf-hXN"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="155" y="260.5"/>
+            <point key="canvasLocation" x="155" y="264"/>
         </scene>
     </scenes>
 </document>

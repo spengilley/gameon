@@ -20,6 +20,7 @@
 @interface InterfaceController()
 
 @property (weak, nonatomic) IBOutlet WKInterfaceImage *me;
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *you;
 
 @property NSInteger yourScore;
 @property NSInteger yourServe;
@@ -47,12 +48,21 @@
         // Configure interface objects here.
         NSLog(@"%@ initWithContext", self);
         
+        self.yourServe=1;
+        
         self.matchID = [[NSUUID UUID] UUIDString];
         NSLog(@"new match with id %@", self.matchID);
-
     }
     
     return self;
+}
+
+- (IBAction)endGameYes {
+    NSLog( @"Yes pressed" );
+}
+
+- (IBAction)endGameNo {
+    NSLog( @"No pressed" );
 }
 
 - (IBAction)mePlusPressed {
@@ -61,12 +71,11 @@
     self.lastSide = self.yourSide;
     
     if (self.yourServe==1) {
-        
-
-        
         self.yourScore = self.yourScore+1;
         [self swapSides];
     } else {
+        [self.me setImage:[UIImage imageNamed:@"kass_serving"]];
+        [self.you setImage:[UIImage imageNamed:@"adam"]];
         self.yourServe = 1;
     }
 
@@ -79,6 +88,8 @@
         self.opponentScore = self.opponentScore + 1;
         [self swapSides];
     } else {
+        [self.me setImage:[UIImage imageNamed:@"kass"]];
+        [self.you setImage:[UIImage imageNamed:@"adam_serving"]];
         self.yourServe = 0;
     }
     [self updateScore];
