@@ -64,7 +64,9 @@
 }
 
 - (IBAction)endGameYes {
-    NSLog( @"Yes pressed" );
+    self.yourScore = 0;
+    self.opponentScore = 0;
+    [self updateScore];
 }
 
 - (IBAction)endGameNo {
