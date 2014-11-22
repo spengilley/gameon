@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *ScoreLabel;
 @property NSInteger yourScore;
 @property NSInteger opponentScore;
+@property BOOL yourServe;
+@property BOOL yourServeLeft;
 
 @end
 
@@ -42,6 +44,8 @@
     return self;
 }
 - (IBAction)youScoreButtonPressed {
+    
+    
     
     self.yourScore = self.yourScore+1;
     [self updateScore];
