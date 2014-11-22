@@ -19,10 +19,7 @@
 
 @interface InterfaceController()
 
-@property (weak, nonatomic) IBOutlet WKInterfaceButton *mePlus;
-@property (weak, nonatomic) IBOutlet WKInterfaceButton *youPlus;
-@property (weak, nonatomic) IBOutlet WKInterfaceButton *youMinus;
-@property (weak, nonatomic) IBOutlet WKInterfaceButton *meMinus;
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *me;
 
 @property NSInteger yourScore;
 @property NSInteger yourServe;
@@ -34,6 +31,7 @@
 @property NSInteger opponentScore;
 @property NSString *matchID;
 
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *startButton;
 
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *scoreLabel;
 
@@ -49,11 +47,6 @@
         // Configure interface objects here.
         NSLog(@"%@ initWithContext", self);
         
-        [self.mePlus setBackgroundImage:[UIImage imageNamed:@"plus"]];
-        [self.youPlus setBackgroundImage:[UIImage imageNamed:@"plus"]];
-        [self.meMinus setBackgroundImage:[UIImage imageNamed:@"minus"]];
-        [self.youMinus setBackgroundImage:[UIImage imageNamed:@"minus"]];
-        
         self.matchID = [[NSUUID UUID] UUIDString];
         NSLog(@"new match with id %@", self.matchID);
 
@@ -68,6 +61,9 @@
     self.lastSide = self.yourSide;
     
     if (self.yourServe==1) {
+        
+
+        
         self.yourScore = self.yourScore+1;
         [self swapSides];
     } else {

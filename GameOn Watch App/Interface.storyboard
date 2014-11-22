@@ -10,41 +10,70 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <imageView width="136" height="49.5" alignment="left" image="Start" contentMode="scaleAspectFit" id="YLH-Tf-l2i"/>
-                        <group width="134" height="52" alignment="left" hasDetent="YES" id="qIH-Ji-ang">
+                        <group width="134" height="47" alignment="left" hasDetent="YES" id="qIH-Ji-ang">
                             <items>
-                                <button width="52" height="54" alignment="left" id="MnJ-0I-r7z">
-                                    <color key="titleColor" red="0.17254901959999999" green="0.7725490196" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                <button alignment="left" id="MnJ-0I-r7z">
+                                    <group key="contentGroup" width="38" height="47" alignment="left" id="gKi-rl-dZy">
+                                        <items>
+                                            <imageView width="20" height="20" alignment="center" verticalAlignment="center" image="minus" id="5vO-PP-UpP"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="meMinusPressed" destination="AgC-eL-Hgc" id="8KG-j3-vN1"/>
+                                    </connections>
                                 </button>
-                                <label width="27.5" height="54.5" alignment="left" text="Me" textAlignment="center" id="5hh-Kl-s5J"/>
-                                <button width="52" height="54" alignment="left" id="Jx0-hw-Wyt"/>
-                            </items>
-                        </group>
-                        <label width="136" height="37.5" alignment="left" text="0 - 0" textAlignment="center" id="iI8-XD-bZQ"/>
-                        <group width="1" height="52" alignment="left" hasDetent="YES" id="gAv-md-Dy5">
-                            <items>
-                                <button width="52" height="54" alignment="left" id="iqZ-CN-1fv"/>
-                                <label width="27.5" height="54.5" alignment="left" text="You" textAlignment="center" id="lAM-aN-ACB"/>
-                                <button width="52" height="54" alignment="left" id="Xgd-pe-uya"/>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" hasDetent="YES" id="TYj-a6-2Fd">
-                            <items>
-                                <button alignment="left" id="RTH-mO-fUw">
-                                    <group key="contentGroup" width="1" alignment="left" id="v5u-AZ-qKS"/>
+                                <imageView width="57" height="44" alignment="left" image="Kass" contentMode="scaleAspectFit" id="HZd-Xm-kfP"/>
+                                <button alignment="left" id="Jx0-hw-Wyt">
+                                    <group key="contentGroup" width="33" height="46" alignment="left" id="qgB-ae-o5d">
+                                        <items>
+                                            <imageView width="20" height="20" alignment="center" verticalAlignment="center" image="plus" id="zEV-ZN-5ui"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="mePlusPressed" destination="AgC-eL-Hgc" id="N36-LH-hck"/>
+                                    </connections>
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" hasDetent="YES" id="AVA-oe-ChQ">
+                        <label width="136" height="22.5" alignment="left" text="0 - 0" textAlignment="center" id="iI8-XD-bZQ"/>
+                        <group width="134" height="46" alignment="left" hasDetent="YES" id="Gta-N0-WX3">
                             <items>
-                                <button width="1" alignment="left" title="End Game" id="flc-WY-hKg"/>
+                                <button alignment="left" id="p3u-fT-aYu">
+                                    <group key="contentGroup" width="38" height="47" alignment="left" id="tbv-NH-fJd">
+                                        <items>
+                                            <imageView width="20" height="20" alignment="center" verticalAlignment="center" image="minus" id="L4o-xE-Dfg"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="youMinusPressed" destination="AgC-eL-Hgc" id="5qs-xE-Syu"/>
+                                    </connections>
+                                </button>
+                                <imageView width="57" height="44" alignment="left" image="adam" contentMode="scaleAspectFit" id="5j4-FJ-EmX"/>
+                                <button alignment="left" id="c47-Xh-Gqw">
+                                    <group key="contentGroup" width="33" height="46" alignment="left" id="lsm-pW-J5U">
+                                        <items>
+                                            <imageView width="20" height="20" alignment="center" verticalAlignment="center" image="plus" id="KhD-FX-m1s"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="youPlusPressed" destination="AgC-eL-Hgc" id="mdk-SA-HF2"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="32.5" alignment="center" hasDetent="YES" id="TYj-a6-2Fd">
+                            <items>
+                                <imageView width="68" height="20" alignment="center" image="Start" contentMode="scaleAspectFit" id="dNo-PO-DfK"/>
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="me" destination="HZd-Xm-kfP" id="xZz-Of-uPy"/>
+                        <outlet property="scoreLabel" destination="iI8-XD-bZQ" id="PYk-gP-4dv"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="155" y="282.75"/>
+            <point key="canvasLocation" x="155" y="260.5"/>
         </scene>
     </scenes>
 </document>
