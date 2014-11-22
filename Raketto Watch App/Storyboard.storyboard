@@ -10,6 +10,7 @@
             <objects>
                 <controller id="Hvn-bt-f8w" customClass="InterfaceController">
                     <items>
+                        <imageView width="136" height="49.5" alignment="left" image="Start" contentMode="scaleAspectFit" id="z68-qQ-7eF"/>
                         <group width="134" height="52" alignment="left" hasDetent="YES" id="m4g-u8-u1I">
                             <items>
                                 <button width="52" height="54" alignment="left" id="8b7-1P-xrR">
@@ -45,7 +46,9 @@
                         </group>
                         <group width="1" alignment="left" hasDetent="YES" id="OlZ-mr-GzN">
                             <items>
-                                <button width="1" alignment="left" title="Pause" id="UBO-iz-g2i"/>
+                                <button alignment="left" id="UBO-iz-g2i">
+                                    <group key="contentGroup" width="1" alignment="left" id="dNg-zK-sk3"/>
+                                </button>
                             </items>
                         </group>
                         <group width="1" alignment="left" hasDetent="YES" id="Ich-8q-pyq">
@@ -64,7 +67,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="561" y="270.75"/>
+            <point key="canvasLocation" x="561" y="272.75"/>
         </scene>
     </scenes>
 </document>
