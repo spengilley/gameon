@@ -33,6 +33,8 @@
     UITabBarItem *feedTab = [self.tabBar.items objectAtIndex:1];
     feedTab.image = [[UIImage imageNamed:@"feed"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     feedTab.selectedImage = [UIImage imageNamed:@"feed"];
+    
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateFeeds) userInfo:nil repeats:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +61,24 @@
         profileViewController.name.text = self.userUsingThisApp.username;
         
     }
+}
+
+-(void) updateFeeds
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL *baseUrl = [[[NSFileManager alloc] init] containerURLForSecurityApplicationGroupIdentifier:@"group.adam"];
+        NSURL *url = [NSURL URLWithString:@"current_match" relativeToURL:baseUrl];
+        NSString *fileContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+        NSData *data = [NSData dataWithContentsOfFile:fileContent];
+        
+        if (data != nil) {
+            NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            for (NSString *item in dictionary) {
+                NSLog(@"%@", item);
+            }
+        }
+        
+    });
 }
 
 /*
