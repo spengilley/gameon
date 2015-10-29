@@ -16,7 +16,7 @@
 
 @property (strong, nonatomic) User *user;
 @property (strong, nonatomic) NSArray *rowValues;
-@property (strong, nonatomic) NSMutableDictionary *fuckingDefaults;
+@property (strong, nonatomic) NSMutableDictionary *feckingDefaults;
 @end
 
 @implementation FeedViewController
@@ -45,7 +45,7 @@
 
 -(void) setMatches:(NSNotification *)notifications {
 
-    self.fuckingDefaults = [notifications.userInfo objectForKey:@"matches"];
+    self.feckingDefaults = [notifications.userInfo objectForKey:@"matches"];
     
 //    self.rowValues = [[NSArray alloc] init];
 //    
@@ -82,9 +82,9 @@
     cell.gamesContaingView.layer.cornerRadius = 6;
     cell.scoreContainingView.layer.cornerRadius = 6;
     
-    if(self.fuckingDefaults != nil) {
-        cell.myScore.text = [NSString stringWithFormat:@"%@", [self.fuckingDefaults valueForKey:@"MyScore"]];
-        cell.theirScore.text = [NSString stringWithFormat:@"%@", [self.fuckingDefaults valueForKey:@"TheirScore"]];
+    if(self.feckingDefaults != nil) {
+        cell.myScore.text = [NSString stringWithFormat:@"%@", [self.feckingDefaults valueForKey:@"MyScore"]];
+        cell.theirScore.text = [NSString stringWithFormat:@"%@", [self.feckingDefaults valueForKey:@"TheirScore"]];
         cell.myAvatar.image = self.user.image;
         
     } else {
