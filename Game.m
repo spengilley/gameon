@@ -13,6 +13,7 @@ NSString *const myScoreKey = @"my score key";
 NSString *const theirScoreKey = @"their score key";
 NSString *const startKey = @"game start key";
 NSString *const endKey = @"game end key";
+NSString *const drawKey = @"Draw key!";
 
 @implementation Game
 
